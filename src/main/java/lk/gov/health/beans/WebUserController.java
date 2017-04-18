@@ -28,6 +28,7 @@ import lk.gov.health.schoolhealth.Area;
 import lk.gov.health.schoolhealth.AreaType;
 import lk.gov.health.schoolhealth.Institution;
 import lk.gov.health.schoolhealth.InstitutionType;
+import lk.gov.health.schoolhealth.Month;
 import lk.gov.health.schoolhealth.PrivilegeType;
 import lk.gov.health.schoolhealth.Quarter;
 
@@ -1040,6 +1041,50 @@ public class WebUserController implements Serializable {
         c.set(Calendar.MINUTE, c.getActualMaximum(Calendar.MINUTE));
         c.set(Calendar.SECOND, c.getActualMaximum(Calendar.SECOND));
         return c.getTime();
+    }
+
+    public Date getLastDayOfMonth(int year, Month month) {
+        Calendar c = Calendar.getInstance();
+        c.set(Calendar.YEAR, year);
+        c.set(Calendar.MONTH, getIntMonth(month));
+        return getLastDayOfMonth(c.getTime());
+    }
+
+    public Date getFirstDayOfMonth(int year, Month month) {
+        Calendar c = Calendar.getInstance();
+        c.set(Calendar.YEAR, year);
+        c.set(Calendar.MONTH, getIntMonth(month));
+        return getFirstDayOfMonth(c.getTime());
+    }
+
+    public Integer getIntMonth(Month month) {
+        switch (month) {
+            case January:
+                return Calendar.JANUARY;
+            case February:
+                return Calendar.FEBRUARY;
+            case March:
+                return Calendar.MARCH;
+            case April:
+                return Calendar.APRIL;
+            case May:
+                return Calendar.MAY;
+            case June:
+                return Calendar.JUNE;
+            case July:
+                return Calendar.JULY;
+            case August:
+                return Calendar.AUGUST;
+            case September:
+                return Calendar.SEPTEMBER;
+            case October:
+                return Calendar.OCTOBER;
+            case November:
+                return Calendar.NOVEMBER;
+            case December:
+                return Calendar.DECEMBER;
+        }
+        return null;
     }
 
     @FacesConverter(forClass = WebUser.class)

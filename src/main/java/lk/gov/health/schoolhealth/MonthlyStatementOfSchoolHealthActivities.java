@@ -11,6 +11,8 @@ import java.util.Date;
 import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -40,6 +42,9 @@ public class MonthlyStatementOfSchoolHealthActivities implements Serializable {
     private int statementYear;
     private int statementMonth;
     @Temporal(javax.persistence.TemporalType.TIMESTAMP)
+    @Enumerated(EnumType.STRING)
+    Month statementMonthEnum;
+    @Temporal(javax.persistence.TemporalType.DATE)
     private Date statementDate;
 
 //    1. Basic Data
@@ -374,5 +379,16 @@ public class MonthlyStatementOfSchoolHealthActivities implements Serializable {
     public void setTotalNoOfStudentsToBeExaminedDuringTheYearFemale(int totalNoOfStudentsToBeExaminedDuringTheYearFemale) {
         this.totalNoOfStudentsToBeExaminedDuringTheYearFemale = totalNoOfStudentsToBeExaminedDuringTheYearFemale;
     }
+
+    public Month getStatementMonthEnum() {
+        return statementMonthEnum;
+    }
+
+    public void setStatementMonthEnum(Month statementMonthEnum) {
+        this.statementMonthEnum = statementMonthEnum;
+    }
+    
+    
+    
 
 }

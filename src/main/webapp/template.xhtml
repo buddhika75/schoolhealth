@@ -6,7 +6,7 @@
       xmlns:p="http://primefaces.org/ui">
 
     <h:head>
-        <title><ui:insert name="title">Default Title</ui:insert></title>
+        <title><ui:insert name="title">School Health</ui:insert></title>
         <h:outputStylesheet library="css" name="jsfcrud.css"/>
         <h:outputStylesheet library="css" name="default.css"/>
         <h:outputScript library="js" name="jsfcrud.js"/>
@@ -24,18 +24,19 @@
                         <p:menuitem value="#{bundle.Home}" outcome="/index" icon="ui-icon-home"/>
                         <p:submenu label="Actions">
                             <p:menuitem value="Summery of School Medical Inspections" action="/summeryOfSchoolMedicalInspection/index" />
+                            <p:menuitem value="Monthly Statements" action="/monthlyStatementOfSchoolHealthActivities/index" />
                         </p:submenu>
                         <p:submenu label="#{bundle.Maintenance}">
                             <p:menuitem value="Manage Areas" action="/area/add_area_index" />
                             <p:menuitem value="Manage Users" action="/webUser/add_webuser_index" />
-                             <p:menuitem value="Manage Schools" outcome="/institution/index" />
-                             
+                            <p:menuitem value="Manage Schools" outcome="/institution/index" />
+
                             <p:menuitem value="Activity" outcome="/activity/List.xhtml" />
-                           
+
                             <p:menuitem value="QuarterlySchoolHealthReturn" outcome="/quarterlySchoolHealthReturn/List.xhtml" />
                             <p:menuitem value="SchoolMedicalExaminationRecord" outcome="/schoolMedicalExaminationRecord/List.xhtml" />
                             <p:menuitem value="SchoolMedicalExaminationRecordItem" outcome="/schoolMedicalExaminationRecordItem/List.xhtml" />
-                            
+
                         </p:submenu>
                     </p:menubar>
                 </h:form>
@@ -47,33 +48,33 @@
                         <h:panelGrid columns="25" rendered="#{webUserController.logged}" >
                             <p:outputLabel value="Logged User : #{webUserController.loggedUser.name}" ></p:outputLabel>
                             <p:spacer height="1" width="5" ></p:spacer>
-                            
+
                             <p:outputLabel value="|"  rendered="#{webUserController.loggedPdhsArea ne null}"></p:outputLabel>
                             <p:spacer height="1" width="5" rendered="#{webUserController.loggedPdhsArea ne null}"></p:spacer>
                             <p:outputLabel value="PDHS : #{webUserController.loggedPdhsArea.name}" rendered="#{webUserController.loggedPdhsArea ne null}"></p:outputLabel>
                             <p:spacer height="1" width="5" rendered="#{webUserController.loggedPdhsArea ne null}" ></p:spacer>
-                            
+
                             <p:outputLabel value="|"   rendered="#{webUserController.loggedRdhsArea ne null}"></p:outputLabel>
                             <p:spacer height="1" width="5" rendered="#{webUserController.loggedRdhsArea ne null}"></p:spacer>
                             <p:outputLabel value="RDHS Area : #{webUserController.loggedRdhsArea.name}" rendered="#{webUserController.loggedRdhsArea ne null}"></p:outputLabel>
                             <p:spacer height="1" width="5"  rendered="#{webUserController.loggedRdhsArea ne null}"></p:spacer>
-                            
+
                             <p:outputLabel value="|"  rendered="#{webUserController.loggedMohArea ne null}"></p:outputLabel>
                             <p:spacer height="1" width="5" rendered="#{webUserController.loggedRdhsArea ne null}"></p:spacer>
                             <p:outputLabel value="MOH Area : #{webUserController.loggedMohArea.name}" rendered="#{webUserController.loggedMohArea ne null}"></p:outputLabel>
                             <p:spacer height="1" width="5"  rendered="#{webUserController.loggedMohArea ne null}"></p:spacer>
-                            
-                            
+
+
                             <p:outputLabel value="|"  rendered="#{webUserController.loggedPhiArea ne null}"></p:outputLabel>
                             <p:spacer height="1" width="5" rendered="#{webUserController.loggedPhiArea ne null}"></p:spacer>
                             <p:outputLabel value="PHI Area : #{webUserController.loggedPhiArea.name}" rendered="#{webUserController.loggedPhiArea ne null}"></p:outputLabel>
                             <p:spacer height="1" width="5" rendered="#{webUserController.loggedPhiArea ne null}"></p:spacer>
-                            
+
                             <p:spacer height="1" width="5" ></p:spacer>
                             <p:outputLabel value="|"  ></p:outputLabel>
                             <p:spacer height="1" width="5" ></p:spacer>
                             <p:commandLink ajax="false" value="Logout" action="#{webUserController.logout()}" ></p:commandLink>
-                            
+
                         </h:panelGrid>
                     </h:form>
                 </ui:insert>

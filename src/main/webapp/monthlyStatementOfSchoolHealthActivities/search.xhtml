@@ -3,7 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:p="http://primefaces.org/ui"
-      xmlns:h="http://java.sun.com/jsf/html">
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
 
     <body>
 
@@ -16,11 +17,74 @@
             <ui:define name="body">
                 <p:panel header="Monthly Statement Index" >
                     <h:form >
-                        <h:panelGrid columns="1" >
-                            <p:commandButton ajax="false" value="Search Monthly Statements" action="" ></p:commandButton>
-                            
+                        <h:panelGrid columns="2" >
+                            <p:outputLabel value="Year" ></p:outputLabel>
+
+                            <p:selectOneMenu value="#{monthlyStatementOfSchoolHealthActivitiesController.year}" >
+                                <f:selectItems value="#{monthlyStatementOfSchoolHealthActivitiesController.years}" ></f:selectItems>
+                            </p:selectOneMenu>
+
+                            <p:outputLabel value="PHI Area" ></p:outputLabel>
+                            <p:selectOneMenu value="#{monthlyStatementOfSchoolHealthActivitiesController.phiArea}" >
+                                <f:selectItems value="#{webUserController.myPhiAreas}" var="a" itemLabel="#{a.name}" itemValue="#{a}" ></f:selectItems>
+                            </p:selectOneMenu>
                         </h:panelGrid>
-                        
+                        <p:commandButton ajax="false" value="Process" action="#{monthlyStatementOfSchoolHealthActivitiesController.searchMonthlyStatements()}" ></p:commandButton>
+
+
+
+
+                        <p:dataTable value="#{monthlyStatementOfSchoolHealthActivitiesController.items}" var="item" rowIndexVar="i" rowKey="#{item.id}">
+                            <p:column width="30">
+                                <f:facet name="header">
+                                    <h:outputText value="No"/>
+                                </f:facet>
+                                <h:outputText value="#{item.id}"/>
+                            </p:column>
+                            <p:column>
+                                <f:facet name="header">
+                                    <h:outputText value="Year"/>
+                                </f:facet>
+                                <h:outputText value="#{item.statementYear}"/>
+                            </p:column>
+                            <p:column>
+                                <f:facet name="header">
+                                    <h:outputText value="Month"/>
+                                </f:facet>
+                                <h:outputText value="#{item.statementMonthEnum}"/>
+                            </p:column>
+                            <p:column>
+                                <f:facet name="header">
+                                    <h:outputText value="RDHS Area"/>
+                                </f:facet>
+                                <h:outputText value="#{item.rdhsArea.name}"/>
+                            </p:column>
+                            <p:column>
+                                <f:facet name="header">
+                                    <h:outputText value="MOH Area"/>
+                                </f:facet>
+                                <h:outputText value="#{item.mohArea.name}"/>
+                            </p:column>
+                            <p:column>
+                                <f:facet name="header">
+                                    <h:outputText value="PHI Area"/>
+                                </f:facet>
+                                <h:outputText value="#{item.phiArea.name}"/>
+                            </p:column>
+                            <p:column>
+                                <f:facet name="header">
+                                    <h:outputText value="Actions"/>
+                                </f:facet>
+                                <p:commandButton ajax="false" value="Edit" action="#{monthlyStatementOfSchoolHealthActivitiesController.viewMonthlyStatement()}" >
+                                    <f:setPropertyActionListener target="#{monthlyStatementOfSchoolHealthActivitiesController.selected}" value="#{item}" ></f:setPropertyActionListener>
+
+                                </p:commandButton>
+
+                            </p:column>
+                        </p:dataTable>
+
+
+
                     </h:form>
                 </p:panel>
             </ui:define>

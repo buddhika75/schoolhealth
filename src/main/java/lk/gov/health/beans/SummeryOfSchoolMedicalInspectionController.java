@@ -77,6 +77,18 @@ public class SummeryOfSchoolMedicalInspectionController implements Serializable 
         return "/summeryOfSchoolMedicalInspection/view_my_summery";
     }
 
+    public List<SummeryOfSchoolMedicalInspection> getPhiAreaSummeries(Date fd, Date td, Area phiArea) {
+        String j;
+        Map m = new HashMap();
+        j = "select s from SummeryOfSchoolMedicalInspection s "
+                + " where s.dateExamined between :fd and :td and "
+                + " s.phiArea=:a ";
+        m.put("fd", fd);
+        m.put("td", td);
+        m.put("a", phiArea);
+        return getFacade().findBySQL(j, m);
+    }
+
     public String viewPhiAreaSummeries() {
         String j;
         Map m = new HashMap();
@@ -303,7 +315,7 @@ public class SummeryOfSchoolMedicalInspectionController implements Serializable 
     }
 
     public Date getFromDate() {
-        if(fromDate==null){
+        if (fromDate == null) {
             fromDate = webUserController.getFirstDayOfYear();
         }
         return fromDate;
@@ -314,7 +326,7 @@ public class SummeryOfSchoolMedicalInspectionController implements Serializable 
     }
 
     public Date getToDate() {
-        if(toDate==null){
+        if (toDate == null) {
             toDate = webUserController.getLastDayOfYear();
         }
         return toDate;
