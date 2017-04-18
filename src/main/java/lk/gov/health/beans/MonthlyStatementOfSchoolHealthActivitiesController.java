@@ -6,6 +6,8 @@ import lk.gov.health.beans.util.JsfUtil.PersistAction;
 import lk.gov.health.faces.MonthlyStatementOfSchoolHealthActivitiesFacade;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
@@ -18,8 +20,10 @@ import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
 import javax.faces.convert.Converter;
 import javax.faces.convert.FacesConverter;
+import javax.inject.Inject;
 import lk.gov.health.schoolhealth.Area;
 import lk.gov.health.schoolhealth.Month;
+import lk.gov.health.schoolhealth.SummeryOfSchoolMedicalInspection;
 
 @Named("monthlyStatementOfSchoolHealthActivitiesController")
 @SessionScoped
@@ -27,6 +31,9 @@ public class MonthlyStatementOfSchoolHealthActivitiesController implements Seria
 
     @EJB
     private lk.gov.health.faces.MonthlyStatementOfSchoolHealthActivitiesFacade ejbFacade;
+    @Inject
+    SummeryOfSchoolMedicalInspectionController summeryOfSchoolMedicalInspectionController;
+
     private List<MonthlyStatementOfSchoolHealthActivities> items = null;
     private MonthlyStatementOfSchoolHealthActivities selected;
 
@@ -34,28 +41,73 @@ public class MonthlyStatementOfSchoolHealthActivitiesController implements Seria
     Month month;
     List<Integer> years;
     Area phiArea;
-    
-    public String toGenerateMonthlyStatement(){
+
+    public String toGenerateMonthlyStatement() {
         return "";
     }
-    
-    public String generateMonthlyStatement(){
+
+    public String generateMonthlyStatement() {
+        List<SummeryOfSchoolMedicalInspection> summeries = summeryOfSchoolMedicalInspectionController.getItems();
+        return "/monthlyStatementOfSchoolHealthActivities/monthly_statement";
+    }
+
+    public String saveMonthlyStatement() {
         return "";
     }
-    
-    public String saveMonthlyStatement(){
-         return "";
-    }
-    
-    public String toSearchMonthlyStatements(){
-         return "/monthlyStatementOfSchoolHealthActivities/search";
-    }
-    
-    public String searchMonthlyStatements(){
+
+    public String toSearchMonthlyStatements() {
         return "/monthlyStatementOfSchoolHealthActivities/search";
     }
-    
+
+    public String searchMonthlyStatements() {
+        return "/monthlyStatementOfSchoolHealthActivities/search";
+    }
+
     public MonthlyStatementOfSchoolHealthActivitiesController() {
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public Month getMonth() {
+        return month;
+    }
+
+    public void setMonth(Month month) {
+        this.month = month;
+    }
+
+    public List<Integer> getYears() {
+        if (years == null) {
+            years = new ArrayList<Integer>();
+            Calendar c = Calendar.getInstance();
+            int y = c.get(Calendar.YEAR);
+            years.add(y - 5);
+            years.add(y - 4);
+            years.add(y - 3);
+            years.add(y - 2);
+            years.add(y - 1);
+            years.add(y);
+            years.add(y + 1);
+        }
+        return years;
+    }
+
+    public void setYears(List<Integer> years) {
+        this.years = years;
+    }
+
+    public Area getPhiArea() {
+        return phiArea;
+    }
+
+    public void setPhiArea(Area phiArea) {
+        this.phiArea = phiArea;
     }
 
     public MonthlyStatementOfSchoolHealthActivities getSelected() {

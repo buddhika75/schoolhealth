@@ -12,7 +12,9 @@ import javax.enterprise.context.ApplicationScoped;
 import lk.gov.health.schoolhealth.AreaType;
 import lk.gov.health.schoolhealth.HealthProblem;
 import lk.gov.health.schoolhealth.InstitutionType;
+import lk.gov.health.schoolhealth.Month;
 import lk.gov.health.schoolhealth.PrivilegeType;
+import lk.gov.health.schoolhealth.Quarter;
 
 /**
  *
@@ -28,6 +30,14 @@ public class EnumController {
     public EnumController() {
     }
 
+    public Month[] getMonths() {
+        return Month.values();
+    }
+
+    public Quarter[] getQuarters() {
+        return Quarter.values();
+    }
+
     public AreaType[] getAreaTypes() {
         return AreaType.values();
     }
@@ -41,7 +51,7 @@ public class EnumController {
     }
 
     public HealthProblem[] getOtherHealthProblems() {
-        HealthProblem[] ahp = new HealthProblem[] {
+        HealthProblem[] ahp = new HealthProblem[]{
             HealthProblem.Other,
             HealthProblem.Pediculosis,
             HealthProblem.Night_blindness,
@@ -62,7 +72,7 @@ public class EnumController {
             HealthProblem.Thalassaemia,
             HealthProblem.History_of_fits,
             HealthProblem.Other_defects
-            };
+        };
         return ahp;
     }
 
