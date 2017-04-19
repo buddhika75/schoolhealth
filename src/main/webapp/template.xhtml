@@ -6,11 +6,11 @@
       xmlns:p="http://primefaces.org/ui">
 
     <h:head>
-        <title><ui:insert name="title">School Health</ui:insert></title>
+        <title><ui:insert name="title">School Health Information System</ui:insert></title>
         <h:outputStylesheet library="css" name="jsfcrud.css"/>
         <h:outputStylesheet library="css" name="default.css"/>
         <h:outputScript library="js" name="jsfcrud.js"/>
-
+        
     </h:head>
 
     <h:body>
@@ -18,7 +18,7 @@
         <p:growl id="growl" life="3000" />
 
         <p:layout fullPage="true">
-            <p:layoutUnit position="north" size="80" header="#{bundle.AppName}">
+            <p:layoutUnit position="north" size="80" header="School Health Information System">
                 <h:form id="menuForm">
                     <p:menubar rendered="#{webUserController.logged}">
                         <p:menuitem value="#{bundle.Home}" outcome="/index" icon="ui-icon-home"/>
@@ -31,13 +31,6 @@
                             <p:menuitem value="Manage Areas" action="/area/add_area_index" />
                             <p:menuitem value="Manage Users" action="/webUser/add_webuser_index" />
                             <p:menuitem value="Manage Schools" outcome="/institution/index" />
-
-                            <p:menuitem value="Activity" outcome="/activity/List.xhtml" />
-
-                            <p:menuitem value="QuarterlySchoolHealthReturn" outcome="/quarterlySchoolHealthReturn/List.xhtml" />
-                            <p:menuitem value="SchoolMedicalExaminationRecord" outcome="/schoolMedicalExaminationRecord/List.xhtml" />
-                            <p:menuitem value="SchoolMedicalExaminationRecordItem" outcome="/schoolMedicalExaminationRecordItem/List.xhtml" />
-
                         </p:submenu>
                     </p:menubar>
                 </h:form>
@@ -81,7 +74,7 @@
                 </ui:insert>
             </p:layoutUnit>
 
-            <p:layoutUnit position="center">
+            <p:layoutUnit position="center" >
 
 
                 <p:panel header="Login" rendered="#{!webUserController.logged}" style="z-index: 10; width: 400px; height: 150px;" >
@@ -98,7 +91,7 @@
                     </h:form>
                 </p:panel>
 
-                <p:graphicImage library="images" name="home.png" rendered="#{!webUserController.logged}" styleClass="centrecontent" width="75%" style="z-index: 0;" ></p:graphicImage>
+                <p:graphicImage library="images" name="home1.png" rendered="#{!webUserController.logged}" styleClass="centrecontent" width="75%" style="z-index: 0;" ></p:graphicImage>
 
 
                 <h:panelGrid rendered="#{webUserController.logged}" >
