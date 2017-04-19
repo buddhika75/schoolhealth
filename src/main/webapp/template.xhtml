@@ -18,13 +18,14 @@
         <p:growl id="growl" life="3000" />
 
         <p:layout fullPage="true">
-            <p:layoutUnit position="north" size="65" header="#{bundle.AppName}">
+            <p:layoutUnit position="north" size="80" header="#{bundle.AppName}">
                 <h:form id="menuForm">
                     <p:menubar rendered="#{webUserController.logged}">
                         <p:menuitem value="#{bundle.Home}" outcome="/index" icon="ui-icon-home"/>
                         <p:submenu label="Actions">
                             <p:menuitem value="Summery of School Medical Inspections" action="/summeryOfSchoolMedicalInspection/index" />
                             <p:menuitem value="Monthly Statements" action="/monthlyStatementOfSchoolHealthActivities/index" />
+                            <p:menuitem value="Quartely Returns" action="/quarterlySchoolHealthReturn/index" />
                         </p:submenu>
                         <p:submenu label="#{bundle.Maintenance}">
                             <p:menuitem value="Manage Areas" action="/area/add_area_index" />
@@ -82,19 +83,23 @@
 
             <p:layoutUnit position="center">
 
-                <p:panel header="Login" rendered="#{!webUserController.logged}" styleClass="centrecontent">
+
+                <p:panel header="Login" rendered="#{!webUserController.logged}" style="z-index: 10; width: 400px; height: 150px;" >
                     <h:form >
                         <h:panelGrid columns="3" >
-                            <p:outputLabel value="Username" ></p:outputLabel>
+                            <p:outputLabel value="Username" style="z-index: 10;" ></p:outputLabel>
                             <p:spacer height="1" width="30" ></p:spacer>
-                            <p:inputText value="#{webUserController.userName}" ></p:inputText>
+                            <p:inputText value="#{webUserController.userName}" style="z-index: 100;" ></p:inputText>
                             <p:outputLabel value="Password" ></p:outputLabel>
                             <p:spacer height="1" width="30" ></p:spacer>
                             <p:inputText value="#{webUserController.password}" ></p:inputText>
                         </h:panelGrid>
-                        <p:commandButton style="float: right; margin-left: 80px;" ajax="false" value="Login" action="#{webUserController.login()}" ></p:commandButton>                            
+                        <p:commandButton style="z-index: 10; float: right; margin-right:  80px; " ajax="false" value="Login" action="#{webUserController.login()}" ></p:commandButton>                            
                     </h:form>
                 </p:panel>
+
+                <p:graphicImage library="images" name="home.png" rendered="#{!webUserController.logged}" styleClass="centrecontent" width="75%" style="z-index: 0;" ></p:graphicImage>
+
 
                 <h:panelGrid rendered="#{webUserController.logged}" >
                     <ui:insert name="body">

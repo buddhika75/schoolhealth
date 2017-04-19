@@ -47,7 +47,7 @@ a:link:hover, a:visited:hover  {
         max-height:100%;
         overflow:auto;*/
     position: absolute;
-    left: 50%;
+    left: 60%;
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
