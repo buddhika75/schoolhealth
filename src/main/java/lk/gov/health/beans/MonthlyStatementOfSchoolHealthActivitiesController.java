@@ -89,6 +89,8 @@ public class MonthlyStatementOfSchoolHealthActivitiesController implements Seria
         List<SummeryOfSchoolMedicalInspection> summeries = summeryOfSchoolMedicalInspectionController.getPhiAreaSummeries(fd, td, phiArea);
         List<MonthlyStatementSummeryDataForSingleInspection> sumRows = new ArrayList<MonthlyStatementSummeryDataForSingleInspection>();
 
+        MonthlyStatementSummeryDataForSingleInspection totalCol = new MonthlyStatementSummeryDataForSingleInspection();
+
         for (SummeryOfSchoolMedicalInspection sum : summeries) {
             MonthlyStatementSummeryDataForSingleInspection ssi = new MonthlyStatementSummeryDataForSingleInspection();
             ssi.setMonthlyStatementOfSchoolHealthActivities(s);
@@ -108,6 +110,8 @@ public class MonthlyStatementOfSchoolHealthActivitiesController implements Seria
             ssi.setTotalNoOfChildrenFemale(sum.getTotalNoOfChildrenFemale());
             ssi.setTotalNoOfChildrenMalePercentage(sum.getTotalNoOfChildrenMalePercentage());
             ssi.setTotalNoOfChildren1FemalePercentage(sum.getTotalNoOfChildren1FemalePercentage());
+            totalCol.setTotalNoOfChildrenMale(totalCol.getTotalNoOfChildrenMale() + ssi.getTotalNoOfChildrenMale());
+            totalCol.setTotalNoOfChildrenFemale(totalCol.getTotalNoOfChildrenFemale() + ssi.getTotalNoOfChildrenFemale());
 //
             ssi.setNumberExaminedOfChildren1Male(sum.getNumberExaminedOfChildren1Male());
             ssi.setNumberExaminedOfChildren1Female(sum.getNumberExaminedOfChildren1Female());
@@ -123,6 +127,9 @@ public class MonthlyStatementOfSchoolHealthActivitiesController implements Seria
             ssi.setNumberExaminedOfChildrenFemale(sum.getNumberExaminedOfChildrenFemale());
             ssi.setNumberExaminedOfChildrenMalePercentage(sum.getNumberExaminedOfChildrenMalePercentage());
             ssi.setNumberExaminedOfChildren1FemalePercentage(sum.getNumberExaminedOfChildren1FemalePercentage());
+            totalCol.setNumberExaminedOfChildrenMale(totalCol.getNumberExaminedOfChildrenMale() + ssi.getNumberExaminedOfChildrenMale());
+            totalCol.setNumberExaminedOfChildrenFemale(totalCol.getNumberExaminedOfChildrenFemale() + ssi.getNumberExaminedOfChildrenFemale());
+
 //            
             ssi.setStuntingOfChildren1Male(sum.getStuntingOfChildren1Male());
             ssi.setStuntingOfChildren1Female(sum.getStuntingOfChildren1Female());
@@ -138,6 +145,9 @@ public class MonthlyStatementOfSchoolHealthActivitiesController implements Seria
             ssi.setStuntingOfChildrenFemale(sum.getStuntingOfChildrenFemale());
             ssi.setStuntingOfChildrenMalePercentage(sum.getStuntingOfChildrenMalePercentage());
             ssi.setStuntingOfChildren1FemalePercentage(sum.getStuntingOfChildren1FemalePercentage());
+            totalCol.setStuntingOfChildrenMale(totalCol.getStuntingOfChildrenMale() + ssi.getStuntingOfChildrenMale());
+            totalCol.setStuntingOfChildrenFemale(totalCol.getStuntingOfChildrenFemale() + ssi.getStuntingOfChildrenFemale());
+
 //
             ssi.setWastingOfChildren1Male(sum.getWastingOfChildren1Male());
             ssi.setWastingOfChildren1Female(sum.getWastingOfChildren1Female());
@@ -153,6 +163,9 @@ public class MonthlyStatementOfSchoolHealthActivitiesController implements Seria
             ssi.setWastingOfChildrenFemale(sum.getWastingOfChildrenFemale());
             ssi.setWastingOfChildrenMalePercentage(sum.getWastingOfChildrenMalePercentage());
             ssi.setWastingOfChildren1FemalePercentage(sum.getWastingOfChildren1FemalePercentage());
+            totalCol.setWastingOfChildrenMale(totalCol.getWastingOfChildrenMale() + ssi.getWastingOfChildrenMale());
+            totalCol.setWastingOfChildrenFemale(totalCol.getWastingOfChildrenFemale() + ssi.getWastingOfChildrenFemale());
+
 //
             ssi.setOverweightOfChildren1Male(sum.getOverweightOfChildren1Male());
             ssi.setOverweightOfChildren1Female(sum.getOverweightOfChildren1Female());
@@ -168,6 +181,9 @@ public class MonthlyStatementOfSchoolHealthActivitiesController implements Seria
             ssi.setOverweightOfChildrenFemale(sum.getOverweightOfChildrenFemale());
             ssi.setOverweightOfChildrenMalePercentage(sum.getOverweightOfChildrenMalePercentage());
             ssi.setOverweightOfChildren1FemalePercentage(sum.getOverweightOfChildren1FemalePercentage());
+            totalCol.setOverweightOfChildrenMale(totalCol.getOverweightOfChildrenMale() + ssi.getOverweightOfChildrenMale());
+            totalCol.setOverweightOfChildrenFemale(totalCol.getOverweightOfChildrenFemale() + ssi.getOverweightOfChildrenFemale());
+
 //
             ssi.setObesityChildren1Male(sum.getObesityChildren1Male());
             ssi.setObesityChildren1Female(sum.getObesityChildren1Female());
@@ -183,6 +199,9 @@ public class MonthlyStatementOfSchoolHealthActivitiesController implements Seria
             ssi.setObesityChildrenFemale(sum.getObesityChildrenFemale());
             ssi.setObesityChildrenMalePercentage(sum.getObesityChildrenMalePercentage());
             ssi.setObesityChildren1FemalePercentage(sum.getObesityChildren1FemalePercentage());
+            totalCol.setObesityChildrenMale(totalCol.getObesityChildrenMale() + ssi.getObesityChildrenMale());
+            totalCol.setObesityChildrenFemale(totalCol.getObesityChildrenFemale() + ssi.getObesityChildrenFemale());
+
 //
             ssi.setVisualDefects(sum.getVisualDefectsChildren1Male()
                     + sum.getVisualDefectsChildren1Female()
@@ -307,12 +326,11 @@ public class MonthlyStatementOfSchoolHealthActivitiesController implements Seria
                         + sum.getOtherHealthProblem7ChildrenOtherMale()
                         + sum.getOtherHealthProblem7ChildrenOtherFemale());
             }
-            
-            
 
             sumRows.add(ssi);
         }
         s.setMonthlyStatementSummeryDataForSingleInspections(sumRows);
+        s.setTotalForTheMonth(totalCol);
         getFacade().edit(s);
         selected = s;
         return "/monthlyStatementOfSchoolHealthActivities/monthly_statement";
@@ -349,6 +367,20 @@ public class MonthlyStatementOfSchoolHealthActivitiesController implements Seria
             System.out.println("s = " + s);
         }
         return "/monthlyStatementOfSchoolHealthActivities/monthly_statement";
+    }
+
+    public String deleteMonthlyStatement() {
+        if (selected == null) {
+            JsfUtil.addErrorMessage("Nothing to show");
+            return "";
+        }
+        try {
+            getFacade().remove(selected);
+            JsfUtil.addSuccessMessage("Deleted");
+        } catch (Exception e) {
+            JsfUtil.addErrorMessage("Could NOT delete. " + e.getMessage());
+        }
+        return "";
     }
 
     public MonthlyStatementOfSchoolHealthActivitiesController() {

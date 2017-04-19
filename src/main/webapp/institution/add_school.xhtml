@@ -44,6 +44,10 @@
                                 <f:selectItems value="#{webUserController.myEducationalZones}" var="e"
                                                itemLabel="#{e.name}" itemValue="#{e}" />
                             </p:selectOneMenu>
+                            <p:outputLabel value="Type of School:" for="ty" />
+                            <p:selectOneMenu id="ty" value="#{institutionController.selected.typeOfSchool}" >
+                                <f:selectItems value="#{enumController.typesOfSchool}"/>
+                            </p:selectOneMenu>
                         </p:panelGrid>
                         <p:commandButton ajax="false" value="Save" action="#{institutionController.saveNewSchool()}" ></p:commandButton>
                     </h:form>

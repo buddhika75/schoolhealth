@@ -29,6 +29,22 @@ public class MonthlyStatementSummeryDataForSingleInspection implements Serializa
     @ManyToOne
     MonthlyStatementOfSchoolHealthActivities monthlyStatementOfSchoolHealthActivities;
     
+    boolean screenedByPhi;
+    int  screenedByPhiCount;
+    
+    int mohCount;
+    int amohCount;
+    int otherMoCount;
+    int rmoAmoCount;
+    int sphiCount;
+    int phiCount;
+    int phnsCount;
+    int heoCount;
+    int sdtCount;
+    int phmCount;
+    
+    int totalNoOfStudentsInSchoolMale;
+    int totalNoOfStudentsInSchoolFemale;
     
     private int totalNoOfChildren1Male;
     private int totalNoOfChildren1Female;
@@ -153,6 +169,121 @@ public class MonthlyStatementSummeryDataForSingleInspection implements Serializa
     int noOfStudentsWithDefectsExcludingNutritionProblems;
     int noReferredExcludingNutritionProblems;
 
+    public int getScreenedByPhiCount() {
+        return screenedByPhiCount;
+    }
+
+    public void setScreenedByPhiCount(int screenedByPhiCount) {
+        this.screenedByPhiCount = screenedByPhiCount;
+    }
+
+    
+    public boolean isScreenedByPhi() {
+        return screenedByPhi;
+    }
+
+    public void setScreenedByPhi(boolean screenedByPhi) {
+        this.screenedByPhi = screenedByPhi;
+    }
+
+    public int getMohCount() {
+        return mohCount;
+    }
+
+    public void setMohCount(int mohCount) {
+        this.mohCount = mohCount;
+    }
+
+    public int getAmohCount() {
+        return amohCount;
+    }
+
+    public void setAmohCount(int amohCount) {
+        this.amohCount = amohCount;
+    }
+
+    public int getOtherMoCount() {
+        return otherMoCount;
+    }
+
+    public void setOtherMoCount(int otherMoCount) {
+        this.otherMoCount = otherMoCount;
+    }
+
+    public int getRmoAmoCount() {
+        return rmoAmoCount;
+    }
+
+    public void setRmoAmoCount(int rmoAmoCount) {
+        this.rmoAmoCount = rmoAmoCount;
+    }
+
+    public int getSphiCount() {
+        return sphiCount;
+    }
+
+    public void setSphiCount(int sphiCount) {
+        this.sphiCount = sphiCount;
+    }
+
+    public int getPhiCount() {
+        return phiCount;
+    }
+
+    public void setPhiCount(int phiCount) {
+        this.phiCount = phiCount;
+    }
+
+    public int getPhnsCount() {
+        return phnsCount;
+    }
+
+    public void setPhnsCount(int phnsCount) {
+        this.phnsCount = phnsCount;
+    }
+
+    public int getHeoCount() {
+        return heoCount;
+    }
+
+    public void setHeoCount(int heoCount) {
+        this.heoCount = heoCount;
+    }
+
+    public int getSdtCount() {
+        return sdtCount;
+    }
+
+    public void setSdtCount(int sdtCount) {
+        this.sdtCount = sdtCount;
+    }
+
+    public int getPhmCount() {
+        return phmCount;
+    }
+
+    public void setPhmCount(int phmCount) {
+        this.phmCount = phmCount;
+    }
+
+    public int getTotalNoOfStudentsInSchoolMale() {
+        return totalNoOfStudentsInSchoolMale;
+    }
+
+    public void setTotalNoOfStudentsInSchoolMale(int totalNoOfStudentsInSchoolMale) {
+        this.totalNoOfStudentsInSchoolMale = totalNoOfStudentsInSchoolMale;
+    }
+
+    public int getTotalNoOfStudentsInSchoolFemale() {
+        return totalNoOfStudentsInSchoolFemale;
+    }
+
+    public void setTotalNoOfStudentsInSchoolFemale(int totalNoOfStudentsInSchoolFemale) {
+        this.totalNoOfStudentsInSchoolFemale = totalNoOfStudentsInSchoolFemale;
+    }
+
+    
+    
     public SummeryOfSchoolMedicalInspection getSummeryOfSchoolMedicalInspection() {
         return summeryOfSchoolMedicalInspection;
     }
