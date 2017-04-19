@@ -25,6 +25,7 @@ import javax.faces.convert.Converter;
 import javax.faces.convert.FacesConverter;
 import javax.inject.Inject;
 import lk.gov.health.schoolhealth.Area;
+import lk.gov.health.schoolhealth.HealthProblem;
 import lk.gov.health.schoolhealth.Month;
 import lk.gov.health.schoolhealth.MonthlyStatementSummeryDataForSingleInspection;
 import lk.gov.health.schoolhealth.SummeryOfSchoolMedicalInspection;
@@ -183,6 +184,132 @@ public class MonthlyStatementOfSchoolHealthActivitiesController implements Seria
             ssi.setObesityChildrenMalePercentage(sum.getObesityChildrenMalePercentage());
             ssi.setObesityChildren1FemalePercentage(sum.getObesityChildren1FemalePercentage());
 //
+            ssi.setVisualDefects(sum.getVisualDefectsChildren1Male()
+                    + sum.getVisualDefectsChildren1Female()
+                    + sum.getVisualDefectsChildren4Male()
+                    + sum.getVisualDefectsChildren4Female()
+                    + sum.getVisualDefectsChildren7Male()
+                    + sum.getVisualDefectsChildren7Female()
+                    + sum.getVisualDefectsChildren10Male()
+                    + sum.getVisualDefectsChildren10Female()
+                    + sum.getVisualDefectsChildrenOtherMale()
+                    + sum.getVisualDefectsChildrenOtherFemale());
+
+            ssi.setHearingDefects(sum.getHearingDefectsChildren1Male()
+                    + sum.getHearingDefectsChildren1Female()
+                    + sum.getHearingDefectsChildren4Male()
+                    + sum.getHearingDefectsChildren4Female()
+                    + sum.getHearingDefectsChildren7Male()
+                    + sum.getHearingDefectsChildren7Female()
+                    + sum.getHearingDefectsChildren10Male()
+                    + sum.getHearingDefectsChildren10Female()
+                    + sum.getHearingDefectsChildrenOtherMale()
+                    + sum.getHearingDefectsChildrenOtherFemale());
+
+            ssi.setSpeechDeefcts(sum.getSpeechDeefctsChildren1Male()
+                    + sum.getSpeechDeefctsChildren1Female()
+                    + sum.getSpeechDeefctsChildren4Male()
+                    + sum.getSpeechDeefctsChildren4Female()
+                    + sum.getSpeechDeefctsChildren7Male()
+                    + sum.getSpeechDeefctsChildren7Female()
+                    + sum.getSpeechDeefctsChildren10Male()
+                    + sum.getSpeechDeefctsChildren10Female()
+                    + sum.getSpeechDeefctsChildrenOtherMale()
+                    + sum.getSpeechDeefctsChildrenOtherFemale());
+
+            if (sum.getOtherHealthProblem1() == HealthProblem.Pediculosis) {
+                ssi.setPediculosis(sum.getOtherHealthProblem1Children1Male()
+                        + sum.getOtherHealthProblem1Children1Female()
+                        + sum.getOtherHealthProblem1Children4Male()
+                        + sum.getOtherHealthProblem1Children4Female()
+                        + sum.getOtherHealthProblem1Children7Male()
+                        + sum.getOtherHealthProblem1Children7Female()
+                        + sum.getOtherHealthProblem1Children10Male()
+                        + sum.getOtherHealthProblem1Children10Female()
+                        + sum.getOtherHealthProblem1ChildrenOtherMale()
+                        + sum.getOtherHealthProblem1ChildrenOtherFemale());
+            }
+
+            if (sum.getOtherHealthProblem2() == HealthProblem.Pediculosis) {
+                ssi.setPediculosis(sum.getOtherHealthProblem2Children1Male()
+                        + sum.getOtherHealthProblem2Children1Female()
+                        + sum.getOtherHealthProblem2Children4Male()
+                        + sum.getOtherHealthProblem2Children4Female()
+                        + sum.getOtherHealthProblem2Children7Male()
+                        + sum.getOtherHealthProblem2Children7Female()
+                        + sum.getOtherHealthProblem2Children10Male()
+                        + sum.getOtherHealthProblem2Children10Female()
+                        + sum.getOtherHealthProblem2ChildrenOtherMale()
+                        + sum.getOtherHealthProblem2ChildrenOtherFemale());
+            }
+
+            if (sum.getOtherHealthProblem3() == HealthProblem.Pediculosis) {
+                ssi.setPediculosis(sum.getOtherHealthProblem3Children1Male()
+                        + sum.getOtherHealthProblem3Children1Female()
+                        + sum.getOtherHealthProblem3Children4Male()
+                        + sum.getOtherHealthProblem3Children4Female()
+                        + sum.getOtherHealthProblem3Children7Male()
+                        + sum.getOtherHealthProblem3Children7Female()
+                        + sum.getOtherHealthProblem3Children10Male()
+                        + sum.getOtherHealthProblem3Children10Female()
+                        + sum.getOtherHealthProblem3ChildrenOtherMale()
+                        + sum.getOtherHealthProblem3ChildrenOtherFemale());
+            }
+
+            if (sum.getOtherHealthProblem4() == HealthProblem.Pediculosis) {
+                ssi.setPediculosis(sum.getOtherHealthProblem1Children1Male()
+                        + sum.getOtherHealthProblem4Children1Female()
+                        + sum.getOtherHealthProblem4Children4Male()
+                        + sum.getOtherHealthProblem4Children4Female()
+                        + sum.getOtherHealthProblem4Children7Male()
+                        + sum.getOtherHealthProblem4Children7Female()
+                        + sum.getOtherHealthProblem4Children10Male()
+                        + sum.getOtherHealthProblem4Children10Female()
+                        + sum.getOtherHealthProblem4ChildrenOtherMale()
+                        + sum.getOtherHealthProblem4ChildrenOtherFemale());
+            }
+
+            if (sum.getOtherHealthProblem5() == HealthProblem.Pediculosis) {
+                ssi.setPediculosis(sum.getOtherHealthProblem5Children1Male()
+                        + sum.getOtherHealthProblem5Children1Female()
+                        + sum.getOtherHealthProblem5Children4Male()
+                        + sum.getOtherHealthProblem5Children4Female()
+                        + sum.getOtherHealthProblem5Children7Male()
+                        + sum.getOtherHealthProblem5Children7Female()
+                        + sum.getOtherHealthProblem5Children10Male()
+                        + sum.getOtherHealthProblem5Children10Female()
+                        + sum.getOtherHealthProblem5ChildrenOtherMale()
+                        + sum.getOtherHealthProblem5ChildrenOtherFemale());
+            }
+
+            if (sum.getOtherHealthProblem6() == HealthProblem.Pediculosis) {
+                ssi.setPediculosis(sum.getOtherHealthProblem1Children1Male()
+                        + sum.getOtherHealthProblem6Children1Female()
+                        + sum.getOtherHealthProblem6Children4Male()
+                        + sum.getOtherHealthProblem6Children4Female()
+                        + sum.getOtherHealthProblem6Children7Male()
+                        + sum.getOtherHealthProblem6Children7Female()
+                        + sum.getOtherHealthProblem6Children10Male()
+                        + sum.getOtherHealthProblem6Children10Female()
+                        + sum.getOtherHealthProblem6ChildrenOtherMale()
+                        + sum.getOtherHealthProblem6ChildrenOtherFemale());
+            }
+
+            if (sum.getOtherHealthProblem7() == HealthProblem.Pediculosis) {
+                ssi.setPediculosis(sum.getOtherHealthProblem7Children1Male()
+                        + sum.getOtherHealthProblem7Children1Female()
+                        + sum.getOtherHealthProblem7Children4Male()
+                        + sum.getOtherHealthProblem7Children4Female()
+                        + sum.getOtherHealthProblem7Children7Male()
+                        + sum.getOtherHealthProblem7Children7Female()
+                        + sum.getOtherHealthProblem7Children10Male()
+                        + sum.getOtherHealthProblem7Children10Female()
+                        + sum.getOtherHealthProblem7ChildrenOtherMale()
+                        + sum.getOtherHealthProblem7ChildrenOtherFemale());
+            }
+            
+            
+
             sumRows.add(ssi);
         }
         s.setMonthlyStatementSummeryDataForSingleInspections(sumRows);
