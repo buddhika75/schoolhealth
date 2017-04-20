@@ -17,8 +17,9 @@
                 <p:panel header="Quarterly School Health Returns Index" >
                     <h:form >
                         <h:panelGrid columns="1" >
-                            <p:commandButton ajax="false" value="Search Quarterly School Health Returns" action="#{monthlyStatementOfSchoolHealthActivitiesController.toSearchMonthlyStatements()}" ></p:commandButton>
-                            <p:commandButton ajax="false" value="Generate Quarterly School Health Returns" action="#{monthlyStatementOfSchoolHealthActivitiesController.toGenerateMonthlyStatement()}" ></p:commandButton>
+                            <p:commandButton ajax="false" value="Search Quarterly School Health Returns of MOH" action="#{quarterlySchoolHealthReturnController.listMohReturns()}" ></p:commandButton>
+                            <p:commandButton ajax="false" value="Search Quarterly School Health Returns of RDHS" action="#{quarterlySchoolHealthReturnController.listMohReturns()}" ></p:commandButton>
+                            <p:commandButton ajax="false" value="Generate Quarterly School Health Returns" action="#{quarterlySchoolHealthReturnController.toGenerateReturn()}" ></p:commandButton>
                         
                         </h:panelGrid>
 

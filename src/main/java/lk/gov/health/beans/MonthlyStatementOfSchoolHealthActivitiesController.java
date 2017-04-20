@@ -65,7 +65,7 @@ public class MonthlyStatementOfSchoolHealthActivitiesController implements Seria
                 + " where m.phiArea.parentArea=:a "
                 + " and m.statementYear=:y "
                 + " and m.statementMonthEnum=:m";
-        map.put("phi", phiArea);
+        map.put("a", phiArea);
         map.put("y", year);
         map.put("m", month);
         return getFacade().findBySQL(j, map);

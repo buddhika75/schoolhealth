@@ -60,9 +60,9 @@ public class QuarterlySchoolHealthReturnController implements Serializable {
         String j;
         Map m = new HashMap();
         j = " select q from QuarterlySchoolHealthReturn q "
-                + " where q.mohArea=:moh "
+                + " where q.moh_area=:moh "
                 + " and q.report_year=:y "
-                + " and q.report_quarter=:q";
+                + " and q.report_quarter_enum=:q";
         m.put("moh", moh);
         m.put("y", year);
         m.put("q", quarter);
@@ -164,15 +164,23 @@ public class QuarterlySchoolHealthReturnController implements Serializable {
             
             s.setHypopigmented_skin_patches(s.getHypopigmented_skin_patches() + m1.getTotalForTheMonth().getHypopigmentedAnaestheticPatches());
             
-            s.setVisual_defects(s.getVisual_defects() + m1.getTotalForTheMonth().getVisualDefects());
-            s.setVisual_defects(s.getVisual_defects() + m1.getTotalForTheMonth().getVisualDefects());
-            s.setVisual_defects(s.getVisual_defects() + m1.getTotalForTheMonth().getVisualDefects());
-            s.setVisual_defects(s.getVisual_defects() + m1.getTotalForTheMonth().getVisualDefects());
-            s.setVisual_defects(s.getVisual_defects() + m1.getTotalForTheMonth().getVisualDefects());
-            s.setVisual_defects(s.getVisual_defects() + m1.getTotalForTheMonth().getVisualDefects());
-            s.setVisual_defects(s.getVisual_defects() + m1.getTotalForTheMonth().getVisualDefects());
-            s.setVisual_defects(s.getVisual_defects() + m1.getTotalForTheMonth().getVisualDefects());
-            s.setVisual_defects(s.getVisual_defects() + m1.getTotalForTheMonth().getVisualDefects());
+            s.setOther_skin_disorders(s.getOther_skin_disorders()+ m1.getTotalForTheMonth().getOtherSkinDisorders());
+            
+            s.setOrthopaedic_disorders(s.getOrthopaedic_disorders()+ m1.getTotalForTheMonth().getOrthopaedicDefects());
+            
+            s.setRheumatic_disorders(s.getRheumatic_disorders()+ m1.getTotalForTheMonth().getRheumaticDisorders());
+            
+            s.setHeart_diseases(s.getHeart_diseases() + m1.getTotalForTheMonth().getHeartDeceases());
+            
+            s.setLung_diseases(s.getLung_diseases()+ m1.getTotalForTheMonth().getLungDiseases());
+            
+            s.setBronchial_asthma(s.getBronchial_asthma()+ m1.getTotalForTheMonth().getAsthma());
+            
+            s.setBehavioural_problems(s.getBehavioural_problems()+ m1.getTotalForTheMonth().getBehaviouralProblems());
+            
+            s.setLearning_difficulties(s.getLearning_difficulties() + m1.getTotalForTheMonth().getLearningDifficulties());
+            
+            s.setOther_defects(s.getOther_defects() + m1.getTotalForTheMonth().getOtherDefects());
             
 
         }
