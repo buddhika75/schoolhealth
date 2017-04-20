@@ -50,7 +50,7 @@
                                             <p:outputLabel value="MohArea:" for="mohArea" />
                                         </td>
                                         <td>
-                                            <p:selectOneMenu id="mohArea" value="#{summeryOfSchoolMedicalInspectionController.selected.mohArea}" >
+                                            <p:selectOneMenu  required="true"  id="mohArea" value="#{summeryOfSchoolMedicalInspectionController.selected.mohArea}" >
                                                 <f:selectItems value="#{webUserController.myMohAreas}"
                                                                var="m" itemLabel="#{m.name}" itemValue="#{m}"/>
                                             </p:selectOneMenu>
@@ -62,7 +62,7 @@
                                             <p:outputLabel value="PhiArea:" for="phiArea" />
                                         </td>
                                         <td>
-                                            <p:selectOneMenu id="phiArea" value="#{summeryOfSchoolMedicalInspectionController.selected.phiArea}" >
+                                            <p:selectOneMenu  required="true"  id="phiArea" value="#{summeryOfSchoolMedicalInspectionController.selected.phiArea}" >
                                                 <f:selectItems value="#{webUserController.myPhiAreas}"
                                                                var="p" itemLabel="#{p.name}" itemValue="#{p}"/>
                                             </p:selectOneMenu>
@@ -74,7 +74,7 @@
                                             <p:outputLabel value="School:" for="school" />
                                         </td>
                                         <td>
-                                            <p:selectOneMenu id="school" value="#{summeryOfSchoolMedicalInspectionController.selected.school}"  >
+                                            <p:selectOneMenu required="true" id="school" value="#{summeryOfSchoolMedicalInspectionController.selected.school}"  >
                                                 <f:selectItem itemLabel="Select School" ></f:selectItem>
                                                 <f:selectItems value="#{webUserController.mySchools}"
                                                                var="s" itemValue="#{s}" itemLabel="#{s.name}"/>
@@ -98,7 +98,7 @@
                                             <p:outputLabel value="DateExamined:" for="dateExamined" />
                                         </td>
                                         <td>
-                                            <p:calendar id="dateExamined" value="#{summeryOfSchoolMedicalInspectionController.selected.dateExamined}" title="DateExamined" pattern="dd/MM/yyyy" >
+                                            <p:calendar  required="true"  id="dateExamined" value="#{summeryOfSchoolMedicalInspectionController.selected.dateExamined}" title="DateExamined" pattern="dd/MM/yyyy" >
                                             </p:calendar>
                                         </td>
                                     </tr>

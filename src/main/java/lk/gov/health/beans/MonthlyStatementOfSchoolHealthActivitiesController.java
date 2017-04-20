@@ -128,8 +128,19 @@ public class MonthlyStatementOfSchoolHealthActivitiesController implements Seria
             ssi.setTotalNoOfChildrenFemale(sum.getTotalNoOfChildrenFemale());
             ssi.setTotalNoOfChildrenMalePercentage(sum.getTotalNoOfChildrenMalePercentage());
             ssi.setTotalNoOfChildren1FemalePercentage(sum.getTotalNoOfChildren1FemalePercentage());
-            totalColMonth.setTotalNoOfChildrenMale(totalColMonth.getTotalNoOfChildrenMale() + ssi.getTotalNoOfChildrenMale());
-            totalColMonth.setTotalNoOfChildrenFemale(totalColMonth.getTotalNoOfChildrenFemale() + ssi.getTotalNoOfChildrenFemale());
+
+            totalColMonth.setTotalNoOfChildren1Male(totalColMonth.getTotalNoOfChildren1Male() + sum.getTotalNoOfChildren1Male());
+            totalColMonth.setTotalNoOfChildren1Female(totalColMonth.getTotalNoOfChildren1Female() + sum.getTotalNoOfChildren1Female());
+            totalColMonth.setTotalNoOfChildren4Male(totalColMonth.getTotalNoOfChildren4Male() + sum.getTotalNoOfChildren4Male());
+            totalColMonth.setTotalNoOfChildren4Female(totalColMonth.getTotalNoOfChildren4Female() + sum.getTotalNoOfChildren4Female());
+            totalColMonth.setTotalNoOfChildren7Male(totalColMonth.getTotalNoOfChildren7Male() + sum.getTotalNoOfChildren7Male());
+            totalColMonth.setTotalNoOfChildren7Female(totalColMonth.getTotalNoOfChildren7Female() + sum.getTotalNoOfChildren7Female());
+            totalColMonth.setTotalNoOfChildren10Male(totalColMonth.getTotalNoOfChildren10Male() + sum.getTotalNoOfChildren10Male());
+            totalColMonth.setTotalNoOfChildren10Female(totalColMonth.getTotalNoOfChildren10Female() + sum.getTotalNoOfChildren10Female());
+            totalColMonth.setTotalNoOfChildrenOtherMale(totalColMonth.getTotalNoOfChildrenOtherMale() + sum.getTotalNoOfChildrenOtherMale());
+            totalColMonth.setTotalNoOfChildrenOtherFemale(totalColMonth.getTotalNoOfChildrenOtherFemale() + sum.getTotalNoOfChildrenOtherFemale());
+            totalColMonth.setTotalNoOfChildrenMale(totalColMonth.getTotalNoOfChildrenMale() + sum.getTotalNoOfChildrenMale());
+            totalColMonth.setTotalNoOfChildrenFemale(totalColMonth.getTotalNoOfChildrenFemale() + sum.getTotalNoOfChildrenFemale());
 //
             ssi.setNumberExaminedOfChildren1Male(sum.getNumberExaminedOfChildren1Male());
             ssi.setNumberExaminedOfChildren1Female(sum.getNumberExaminedOfChildren1Female());
@@ -145,9 +156,19 @@ public class MonthlyStatementOfSchoolHealthActivitiesController implements Seria
             ssi.setNumberExaminedOfChildrenFemale(sum.getNumberExaminedOfChildrenFemale());
             ssi.setNumberExaminedOfChildrenMalePercentage(sum.getNumberExaminedOfChildrenMalePercentage());
             ssi.setNumberExaminedOfChildren1FemalePercentage(sum.getNumberExaminedOfChildren1FemalePercentage());
-            totalColMonth.setNumberExaminedOfChildrenMale(totalColMonth.getNumberExaminedOfChildrenMale() + ssi.getNumberExaminedOfChildrenMale());
-            totalColMonth.setNumberExaminedOfChildrenFemale(totalColMonth.getNumberExaminedOfChildrenFemale() + ssi.getNumberExaminedOfChildrenFemale());
 
+            totalColMonth.setNumberExaminedOfChildren1Male(totalColMonth.getNumberExaminedOfChildren1Male() + sum.getNumberExaminedOfChildren1Male());
+            totalColMonth.setNumberExaminedOfChildren1Female(totalColMonth.getNumberExaminedOfChildren1Female() + sum.getNumberExaminedOfChildren1Female());
+            totalColMonth.setNumberExaminedOfChildren4Male(totalColMonth.getNumberExaminedOfChildren4Male() + sum.getNumberExaminedOfChildren4Male());
+            totalColMonth.setNumberExaminedOfChildren4Female(totalColMonth.getNumberExaminedOfChildren4Female() + sum.getNumberExaminedOfChildren4Female());
+            totalColMonth.setNumberExaminedOfChildren7Male(totalColMonth.getNumberExaminedOfChildren7Male() + sum.getNumberExaminedOfChildren7Male());
+            totalColMonth.setNumberExaminedOfChildren7Female(totalColMonth.getNumberExaminedOfChildren7Female() + sum.getNumberExaminedOfChildren7Female());
+            totalColMonth.setNumberExaminedOfChildren10Male(totalColMonth.getNumberExaminedOfChildren10Male() + sum.getNumberExaminedOfChildren10Male());
+            totalColMonth.setNumberExaminedOfChildren10Female(totalColMonth.getNumberExaminedOfChildren10Female() + sum.getNumberExaminedOfChildren10Female());
+            totalColMonth.setNumberExaminedOfChildrenOtherMale(totalColMonth.getNumberExaminedOfChildrenOtherMale() + sum.getNumberExaminedOfChildrenOtherMale());
+            totalColMonth.setNumberExaminedOfChildrenOtherFemale(totalColMonth.getNumberExaminedOfChildrenOtherFemale() + sum.getNumberExaminedOfChildrenOtherFemale());
+            totalColMonth.setNumberExaminedOfChildrenMale(totalColMonth.getNumberExaminedOfChildrenMale() + sum.getNumberExaminedOfChildrenMale());
+            totalColMonth.setNumberExaminedOfChildrenFemale(totalColMonth.getNumberExaminedOfChildrenFemale() + sum.getNumberExaminedOfChildrenFemale());
 //            
             ssi.setStuntingOfChildren1Male(sum.getStuntingOfChildren1Male());
             ssi.setStuntingOfChildren1Female(sum.getStuntingOfChildren1Female());
@@ -164,20 +185,20 @@ public class MonthlyStatementOfSchoolHealthActivitiesController implements Seria
             ssi.setStuntingOfChildrenMalePercentage(sum.getStuntingOfChildrenMalePercentage());
             ssi.setStuntingOfChildren1FemalePercentage(sum.getStuntingOfChildren1FemalePercentage());
 
-            totalColMonth.setStuntingOfChildren1Male(totalColMonth.getStuntingOfChildren1Male()+sum.getStuntingOfChildren1Male());
-            totalColMonth.setStuntingOfChildren1Female(totalColMonth.getStuntingOfChildren1Female()+sum.getStuntingOfChildren1Female());
-            totalColMonth.setStuntingOfChildren4Male(totalColMonth.getStuntingOfChildren4Male()+sum.getStuntingOfChildren4Male());
-            totalColMonth.setStuntingOfChildren4Female(totalColMonth.getStuntingOfChildren4Female()+sum.getStuntingOfChildren4Female());
-            totalColMonth.setStuntingOfChildren7Male(totalColMonth.getStuntingOfChildren7Male()+sum.getStuntingOfChildren7Male());
-            totalColMonth.setStuntingOfChildren7Female(totalColMonth.getStuntingOfChildren7Female()+sum.getStuntingOfChildren7Female());
-            totalColMonth.setStuntingOfChildren10Male(totalColMonth.getStuntingOfChildren10Male()+sum.getStuntingOfChildren10Male());
-            totalColMonth.setStuntingOfChildren10Female(totalColMonth.getStuntingOfChildren10Female()+sum.getStuntingOfChildren10Female());
-            totalColMonth.setStuntingOfChildrenOtherMale(totalColMonth.getStuntingOfChildrenOtherMale()+sum.getStuntingOfChildrenOtherMale());
-            totalColMonth.setStuntingOfChildrenOtherFemale(totalColMonth.getStuntingOfChildrenOtherFemale()+sum.getStuntingOfChildrenOtherFemale());
-            totalColMonth.setStuntingOfChildrenMale(totalColMonth.getStuntingOfChildrenMale()+sum.getStuntingOfChildrenMale());
-            totalColMonth.setStuntingOfChildrenFemale(totalColMonth.getStuntingOfChildrenFemale()+sum.getStuntingOfChildrenFemale());
-            totalColMonth.setStuntingOfChildrenMalePercentage(totalColMonth.getStuntingOfChildrenMalePercentage()+sum.getStuntingOfChildrenMalePercentage());
-            totalColMonth.setStuntingOfChildren1FemalePercentage(totalColMonth.getStuntingOfChildren1FemalePercentage()+sum.getStuntingOfChildren1FemalePercentage());
+            totalColMonth.setStuntingOfChildren1Male(totalColMonth.getStuntingOfChildren1Male() + sum.getStuntingOfChildren1Male());
+            totalColMonth.setStuntingOfChildren1Female(totalColMonth.getStuntingOfChildren1Female() + sum.getStuntingOfChildren1Female());
+            totalColMonth.setStuntingOfChildren4Male(totalColMonth.getStuntingOfChildren4Male() + sum.getStuntingOfChildren4Male());
+            totalColMonth.setStuntingOfChildren4Female(totalColMonth.getStuntingOfChildren4Female() + sum.getStuntingOfChildren4Female());
+            totalColMonth.setStuntingOfChildren7Male(totalColMonth.getStuntingOfChildren7Male() + sum.getStuntingOfChildren7Male());
+            totalColMonth.setStuntingOfChildren7Female(totalColMonth.getStuntingOfChildren7Female() + sum.getStuntingOfChildren7Female());
+            totalColMonth.setStuntingOfChildren10Male(totalColMonth.getStuntingOfChildren10Male() + sum.getStuntingOfChildren10Male());
+            totalColMonth.setStuntingOfChildren10Female(totalColMonth.getStuntingOfChildren10Female() + sum.getStuntingOfChildren10Female());
+            totalColMonth.setStuntingOfChildrenOtherMale(totalColMonth.getStuntingOfChildrenOtherMale() + sum.getStuntingOfChildrenOtherMale());
+            totalColMonth.setStuntingOfChildrenOtherFemale(totalColMonth.getStuntingOfChildrenOtherFemale() + sum.getStuntingOfChildrenOtherFemale());
+            totalColMonth.setStuntingOfChildrenMale(totalColMonth.getStuntingOfChildrenMale() + sum.getStuntingOfChildrenMale());
+            totalColMonth.setStuntingOfChildrenFemale(totalColMonth.getStuntingOfChildrenFemale() + sum.getStuntingOfChildrenFemale());
+            totalColMonth.setStuntingOfChildrenMalePercentage(totalColMonth.getStuntingOfChildrenMalePercentage() + sum.getStuntingOfChildrenMalePercentage());
+            totalColMonth.setStuntingOfChildren1FemalePercentage(totalColMonth.getStuntingOfChildren1FemalePercentage() + sum.getStuntingOfChildren1FemalePercentage());
 
 //
             ssi.setWastingOfChildren1Male(sum.getWastingOfChildren1Male());
@@ -194,9 +215,19 @@ public class MonthlyStatementOfSchoolHealthActivitiesController implements Seria
             ssi.setWastingOfChildrenFemale(sum.getWastingOfChildrenFemale());
             ssi.setWastingOfChildrenMalePercentage(sum.getWastingOfChildrenMalePercentage());
             ssi.setWastingOfChildren1FemalePercentage(sum.getWastingOfChildren1FemalePercentage());
-            totalColMonth.setWastingOfChildrenMale(totalColMonth.getWastingOfChildrenMale() + ssi.getWastingOfChildrenMale());
-            totalColMonth.setWastingOfChildrenFemale(totalColMonth.getWastingOfChildrenFemale() + ssi.getWastingOfChildrenFemale());
 
+            totalColMonth.setWastingOfChildren1Male(totalColMonth.getWastingOfChildren1Male() + sum.getWastingOfChildren1Male());
+            totalColMonth.setWastingOfChildren1Female(totalColMonth.getWastingOfChildren1Female() + sum.getWastingOfChildren1Female());
+            totalColMonth.setWastingOfChildren4Male(totalColMonth.getWastingOfChildren4Male() + sum.getWastingOfChildren4Male());
+            totalColMonth.setWastingOfChildren4Female(totalColMonth.getWastingOfChildren4Female() + sum.getWastingOfChildren4Female());
+            totalColMonth.setWastingOfChildren7Male(totalColMonth.getWastingOfChildren7Male() + sum.getWastingOfChildren7Male());
+            totalColMonth.setWastingOfChildren7Female(totalColMonth.getWastingOfChildren7Female() + sum.getWastingOfChildren7Female());
+            totalColMonth.setWastingOfChildren10Male(totalColMonth.getWastingOfChildren10Male() + sum.getWastingOfChildren10Male());
+            totalColMonth.setWastingOfChildren10Female(totalColMonth.getWastingOfChildren10Female() + sum.getWastingOfChildren10Female());
+            totalColMonth.setWastingOfChildrenOtherMale(totalColMonth.getWastingOfChildrenOtherMale() + sum.getWastingOfChildrenOtherMale());
+            totalColMonth.setWastingOfChildrenOtherFemale(totalColMonth.getWastingOfChildrenOtherFemale() + sum.getWastingOfChildrenOtherFemale());
+            totalColMonth.setWastingOfChildrenMale(totalColMonth.getWastingOfChildrenMale() + sum.getWastingOfChildrenMale());
+            totalColMonth.setWastingOfChildrenFemale(totalColMonth.getWastingOfChildrenFemale() + sum.getWastingOfChildrenFemale());
 //
             ssi.setOverweightOfChildren1Male(sum.getOverweightOfChildren1Male());
             ssi.setOverweightOfChildren1Female(sum.getOverweightOfChildren1Female());
@@ -212,9 +243,19 @@ public class MonthlyStatementOfSchoolHealthActivitiesController implements Seria
             ssi.setOverweightOfChildrenFemale(sum.getOverweightOfChildrenFemale());
             ssi.setOverweightOfChildrenMalePercentage(sum.getOverweightOfChildrenMalePercentage());
             ssi.setOverweightOfChildren1FemalePercentage(sum.getOverweightOfChildren1FemalePercentage());
-            totalColMonth.setOverweightOfChildrenMale(totalColMonth.getOverweightOfChildrenMale() + ssi.getOverweightOfChildrenMale());
-            totalColMonth.setOverweightOfChildrenFemale(totalColMonth.getOverweightOfChildrenFemale() + ssi.getOverweightOfChildrenFemale());
 
+            totalColMonth.setOverweightOfChildren1Male(totalColMonth.getOverweightOfChildren1Male() + sum.getOverweightOfChildren1Male());
+            totalColMonth.setOverweightOfChildren1Female(totalColMonth.getOverweightOfChildren1Female() + sum.getOverweightOfChildren1Female());
+            totalColMonth.setOverweightOfChildren4Male(totalColMonth.getOverweightOfChildren4Male() + sum.getOverweightOfChildren4Male());
+            totalColMonth.setOverweightOfChildren4Female(totalColMonth.getOverweightOfChildren4Female() + sum.getOverweightOfChildren4Female());
+            totalColMonth.setOverweightOfChildren7Male(totalColMonth.getOverweightOfChildren7Male() + sum.getOverweightOfChildren7Male());
+            totalColMonth.setOverweightOfChildren7Female(totalColMonth.getOverweightOfChildren7Female() + sum.getOverweightOfChildren7Female());
+            totalColMonth.setOverweightOfChildren10Male(totalColMonth.getOverweightOfChildren10Male() + sum.getOverweightOfChildren10Male());
+            totalColMonth.setOverweightOfChildren10Female(totalColMonth.getOverweightOfChildren10Female() + sum.getOverweightOfChildren10Female());
+            totalColMonth.setOverweightOfChildrenOtherMale(totalColMonth.getOverweightOfChildrenOtherMale() + sum.getOverweightOfChildrenOtherMale());
+            totalColMonth.setOverweightOfChildrenOtherFemale(totalColMonth.getOverweightOfChildrenOtherFemale() + sum.getOverweightOfChildrenOtherFemale());
+            totalColMonth.setOverweightOfChildrenMale(totalColMonth.getOverweightOfChildrenMale() + sum.getOverweightOfChildrenMale());
+            totalColMonth.setOverweightOfChildrenFemale(totalColMonth.getOverweightOfChildrenFemale() + sum.getOverweightOfChildrenFemale());
 //
             ssi.setObesityChildren1Male(sum.getObesityChildren1Male());
             ssi.setObesityChildren1Female(sum.getObesityChildren1Female());
@@ -230,9 +271,19 @@ public class MonthlyStatementOfSchoolHealthActivitiesController implements Seria
             ssi.setObesityChildrenFemale(sum.getObesityChildrenFemale());
             ssi.setObesityChildrenMalePercentage(sum.getObesityChildrenMalePercentage());
             ssi.setObesityChildren1FemalePercentage(sum.getObesityChildren1FemalePercentage());
-            totalColMonth.setObesityChildrenMale(totalColMonth.getObesityChildrenMale() + ssi.getObesityChildrenMale());
-            totalColMonth.setObesityChildrenFemale(totalColMonth.getObesityChildrenFemale() + ssi.getObesityChildrenFemale());
 
+            ssi.setObesityChildren1Male(sum.getObesityChildren1Male()+sum.getObesityChildren1Male());
+            ssi.setObesityChildren1Female(sum.getObesityChildren1Female()+sum.getObesityChildren1Female());
+            ssi.setObesityChildren4Male(sum.getObesityChildren4Male()+sum.getObesityChildren4Male());
+            ssi.setObesityChildren4Female(sum.getObesityChildren4Female()+sum.getObesityChildren4Female());
+            ssi.setObesityChildren7Male(sum.getObesityChildren7Male()+sum.getObesityChildren7Male());
+            ssi.setObesityChildren7Female(sum.getObesityChildren7Female()+sum.getObesityChildren7Female());
+            ssi.setObesityChildren10Male(sum.getObesityChildren10Male()+sum.getObesityChildren10Male());
+            ssi.setObesityChildren10Female(sum.getObesityChildren10Female()+sum.getObesityChildren10Female());
+            ssi.setObesityChildrenOtherMale(sum.getObesityChildrenOtherMale()+sum.getObesityChildrenOtherMale());
+            ssi.setObesityChildrenOtherFemale(sum.getObesityChildrenOtherFemale()+sum.getObesityChildrenOtherFemale());
+            ssi.setObesityChildrenMale(sum.getObesityChildrenMale()+sum.getObesityChildrenMale());
+            ssi.setObesityChildrenFemale(sum.getObesityChildrenFemale()+sum.getObesityChildrenFemale());
 //
             ssi.setVisualDefects(sum.getVisualDefectsChildren1Male()
                     + sum.getVisualDefectsChildren1Female()

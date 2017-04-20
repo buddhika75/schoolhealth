@@ -22,7 +22,7 @@
 
                         <p:commandButton ajax="false" value="Save" action="#{quarterlySchoolHealthReturnController.updateReturn()}" ></p:commandButton>
 
-                        <p:tabView >
+                        <p:tabView activeIndex="6">
                             <p:tab title="1. Basic Data" >
 
                             </p:tab>
@@ -90,6 +90,691 @@
 
                                     </tr>
 
+                                    <tr>
+                                        <td  >
+                                            <p:outputLabel value="Female" ></p:outputLabel>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.stunting_1_f_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.stunting_1_f_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.stunting_1_f_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.stunting_1_f}" ></p:inputText>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td rowspan="2" >
+                                            <p:outputLabel value="Grade 4" ></p:outputLabel>
+                                        </td>
+                                        <td  >
+                                            <p:outputLabel value="Male" ></p:outputLabel>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.stunting_4_m_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.stunting_4_m_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.stunting_4_m_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.stunting_4_m}" ></p:inputText>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td  >
+                                            <p:outputLabel value="Female" ></p:outputLabel>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.stunting_4_f_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.stunting_4_f_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.stunting_4_f_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.stunting_4_f}" ></p:inputText>
+                                        </td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td rowspan="10">
+                                            <p:outputLabel value="Wasting" ></p:outputLabel>
+                                        </td>
+                                        <td rowspan="2" >
+                                            <p:outputLabel value="Grade 1" ></p:outputLabel>
+                                        </td>
+                                        <td  >
+                                            <p:outputLabel value="Male" ></p:outputLabel>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.wasting_1_m_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.wasting_1_m_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.wasting_1_m_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.wasting_1_m}" ></p:inputText>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td  >
+                                            <p:outputLabel value="Female" ></p:outputLabel>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.wasting_1_f_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.wasting_1_f_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.wasting_1_f_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.wasting_1_f}" ></p:inputText>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td rowspan="2" >
+                                            <p:outputLabel value="Grade 4" ></p:outputLabel>
+                                        </td>
+                                        <td  >
+                                            <p:outputLabel value="Male" ></p:outputLabel>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.wasting_4_m_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.wasting_4_m_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.wasting_4_m_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.wasting_4_m}" ></p:inputText>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td  >
+                                            <p:outputLabel value="Female" ></p:outputLabel>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.wasting_4_f_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.wasting_4_f_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.wasting_4_f_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.wasting_4_f}" ></p:inputText>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td rowspan="2" >
+                                            <p:outputLabel value="Grade 7" ></p:outputLabel>
+                                        </td>
+                                        <td  >
+                                            <p:outputLabel value="Male" ></p:outputLabel>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.wasting_7_m_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.wasting_7_m_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.wasting_7_m_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.wasting_7_m}" ></p:inputText>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td  >
+                                            <p:outputLabel value="Female" ></p:outputLabel>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.wasting_7_f_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.wasting_7_f_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.wasting_7_f_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.wasting_7_f}" ></p:inputText>
+                                        </td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td rowspan="2" >
+                                            <p:outputLabel value="Grade 10" ></p:outputLabel>
+                                        </td>
+                                        <td  >
+                                            <p:outputLabel value="Male" ></p:outputLabel>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.wasting_10_m_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.wasting_10_m_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.wasting_10_m_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.wasting_10_m}" ></p:inputText>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td  >
+                                            <p:outputLabel value="Female" ></p:outputLabel>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.wasting_10_f_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.wasting_10_f_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.wasting_10_f_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.wasting_10_f}" ></p:inputText>
+                                        </td>
+                                    </tr>                                    
+
+
+                                    <tr>
+                                        <td rowspan="2" >
+                                            <p:outputLabel value="Other" ></p:outputLabel>
+                                        </td>
+                                        <td  >
+                                            <p:outputLabel value="Male" ></p:outputLabel>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.wasting_other_m_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.wasting_other_m_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.wasting_other_m_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.wasting_other_m}" ></p:inputText>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td  >
+                                            <p:outputLabel value="Female" ></p:outputLabel>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.wasting_other_f_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.wasting_other_f_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.wasting_other_f_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.wasting_other_f}" ></p:inputText>
+                                        </td>
+                                    </tr>
+
+
+
+
+
+
+
+                                    <tr>
+                                        <td rowspan="10">
+                                            <p:outputLabel value="Overweight" ></p:outputLabel>
+                                        </td>
+                                        <td rowspan="2" >
+                                            <p:outputLabel value="Grade 1" ></p:outputLabel>
+                                        </td>
+                                        <td  >
+                                            <p:outputLabel value="Male" ></p:outputLabel>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.overweight_1_m_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.overweight_1_m_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.overweight_1_m_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.overweight_1_m}" ></p:inputText>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td  >
+                                            <p:outputLabel value="Female" ></p:outputLabel>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.overweight_1_f_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.overweight_1_f_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.overweight_1_f_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.overweight_1_f}" ></p:inputText>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td rowspan="2" >
+                                            <p:outputLabel value="Grade 4" ></p:outputLabel>
+                                        </td>
+                                        <td  >
+                                            <p:outputLabel value="Male" ></p:outputLabel>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.overweight_4_m_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.overweight_4_m_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.overweight_4_m_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.overweight_4_m}" ></p:inputText>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td  >
+                                            <p:outputLabel value="Female" ></p:outputLabel>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.overweight_4_f_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.overweight_4_f_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.overweight_4_f_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.overweight_4_f}" ></p:inputText>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td rowspan="2" >
+                                            <p:outputLabel value="Grade 7" ></p:outputLabel>
+                                        </td>
+                                        <td  >
+                                            <p:outputLabel value="Male" ></p:outputLabel>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.overweight_7_m_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.overweight_7_m_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.overweight_7_m_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.overweight_7_m}" ></p:inputText>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td  >
+                                            <p:outputLabel value="Female" ></p:outputLabel>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.overweight_7_f_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.overweight_7_f_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.overweight_7_f_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.overweight_7_f}" ></p:inputText>
+                                        </td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td rowspan="2" >
+                                            <p:outputLabel value="Grade 10" ></p:outputLabel>
+                                        </td>
+                                        <td  >
+                                            <p:outputLabel value="Male" ></p:outputLabel>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.overweight_10_m_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.overweight_10_m_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.overweight_10_m_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.overweight_10_m}" ></p:inputText>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td  >
+                                            <p:outputLabel value="Female" ></p:outputLabel>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.overweight_10_f_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.overweight_10_f_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.overweight_10_f_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.overweight_10_f}" ></p:inputText>
+                                        </td>
+                                    </tr>                                    
+
+
+                                    <tr>
+                                        <td rowspan="2" >
+                                            <p:outputLabel value="Other" ></p:outputLabel>
+                                        </td>
+                                        <td  >
+                                            <p:outputLabel value="Male" ></p:outputLabel>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.overweight_other_m_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.overweight_other_m_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.overweight_other_m_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.overweight_other_m}" ></p:inputText>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td  >
+                                            <p:outputLabel value="Female" ></p:outputLabel>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.overweight_other_f_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.overweight_other_f_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.overweight_other_f_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.overweight_other_f}" ></p:inputText>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="10">
+                                            <p:outputLabel value="Obesity" ></p:outputLabel>
+                                        </td>
+                                        <td rowspan="2" >
+                                            <p:outputLabel value="Grade 1" ></p:outputLabel>
+                                        </td>
+                                        <td  >
+                                            <p:outputLabel value="Male" ></p:outputLabel>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.obesity_1_m_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.obesity_1_m_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.obesity_1_m_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.obesity_1_m}" ></p:inputText>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td  >
+                                            <p:outputLabel value="Female" ></p:outputLabel>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.obesity_1_f_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.obesity_1_f_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.obesity_1_f_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.obesity_1_f}" ></p:inputText>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td rowspan="2" >
+                                            <p:outputLabel value="Grade 4" ></p:outputLabel>
+                                        </td>
+                                        <td  >
+                                            <p:outputLabel value="Male" ></p:outputLabel>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.obesity_4_m_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.obesity_4_m_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.obesity_4_m_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.obesity_4_m}" ></p:inputText>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td  >
+                                            <p:outputLabel value="Female" ></p:outputLabel>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.obesity_4_f_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.obesity_4_f_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.obesity_4_f_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.obesity_4_f}" ></p:inputText>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td rowspan="2" >
+                                            <p:outputLabel value="Grade 7" ></p:outputLabel>
+                                        </td>
+                                        <td  >
+                                            <p:outputLabel value="Male" ></p:outputLabel>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.obesity_7_m_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.obesity_7_m_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.obesity_7_m_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.obesity_7_m}" ></p:inputText>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td  >
+                                            <p:outputLabel value="Female" ></p:outputLabel>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.obesity_7_f_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.obesity_7_f_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.obesity_7_f_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.obesity_7_f}" ></p:inputText>
+                                        </td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td rowspan="2" >
+                                            <p:outputLabel value="Grade 10" ></p:outputLabel>
+                                        </td>
+                                        <td  >
+                                            <p:outputLabel value="Male" ></p:outputLabel>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.obesity_10_m_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.obesity_10_m_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.obesity_10_m_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.obesity_10_m}" ></p:inputText>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td  >
+                                            <p:outputLabel value="Female" ></p:outputLabel>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.obesity_10_f_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.obesity_10_f_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.obesity_10_f_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.obesity_10_f}" ></p:inputText>
+                                        </td>
+                                    </tr>                                    
+
+
+                                    <tr>
+                                        <td rowspan="2" >
+                                            <p:outputLabel value="Other" ></p:outputLabel>
+                                        </td>
+                                        <td  >
+                                            <p:outputLabel value="Male" ></p:outputLabel>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.obesity_other_m_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.obesity_other_m_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.obesity_other_m_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.obesity_other_m}" ></p:inputText>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td  >
+                                            <p:outputLabel value="Female" ></p:outputLabel>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.obesity_other_f_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.obesity_other_f_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.obesity_other_f_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.obesity_other_f}" ></p:inputText>
+                                        </td>
+                                    </tr>
+
+
+
+
+
+
+
                                 </table>
 
 
@@ -105,6 +790,373 @@
 
 
 
+
+                            </p:tab>
+
+                            <p:tab title="Defects" >
+                                <table  class="tg"  >
+                                    <tr>
+                                        <th rowspan="3"  >
+                                            <p:outputLabel value="Defects" ></p:outputLabel>
+                                        </th>
+                                        <th colspan="3">
+                                            <p:outputLabel value="No. with Defects" ></p:outputLabel>
+                                        </th>
+                                        <th rowspan="3" >
+                                            <p:outputLabel value="Total for the quarter" ></p:outputLabel>
+                                        </th>
+                                        <th rowspan="3" >
+                                            <p:outputLabel value="Total corrected" ></p:outputLabel>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" >
+                                            <p:outputLabel value="Month" ></p:outputLabel>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p:outputLabel value="#{quarterlySchoolHealthReturnController.selected.month_1}" ></p:outputLabel>
+                                        </td>
+                                        <td>
+                                            <p:outputLabel value="#{quarterlySchoolHealthReturnController.selected.month_2}" ></p:outputLabel>
+                                        </td>
+                                        <td>
+                                            <p:outputLabel value="#{quarterlySchoolHealthReturnController.selected.month_3}" ></p:outputLabel>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <p:outputLabel value="Visual Defects" ></p:outputLabel>
+                                        </th>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.visual_defects_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.visual_defects_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.visual_defects_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.visual_defects}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.visual_defects_corrected}" ></p:inputText>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <p:outputLabel value="Hearing Defects" ></p:outputLabel>
+                                        </th>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.hearing_defects_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.hearing_defects_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.hearing_defects_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.hearing_defects}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.hearing_defects_corrected}" ></p:inputText>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <p:outputLabel value="Speech Defects" ></p:outputLabel>
+                                        </th>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.speech_defects_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.speech_defects_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.speech_defects_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.speech_defects}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.speech_defects_corrected}" ></p:inputText>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <p:outputLabel value="Pediculosis" ></p:outputLabel>
+                                        </th>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.pediculosis_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.pediculosis_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.pediculosis_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.pediculosis}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.pediculosis_corrected}" ></p:inputText>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <p:outputLabel value="Night Blindness" ></p:outputLabel>
+                                        </th>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.night_blindness_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.night_blindness_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.night_blindness_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.night_blindness}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.night_blindness_corrected}" ></p:inputText>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <p:outputLabel value="Bitot Spots" ></p:outputLabel>
+                                        </th>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.bitot_spots_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.bitot_spots_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.bitot_spots_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.bitot_spots}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.bitot_spots_corrected}" ></p:inputText>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>
+                                            <p:outputLabel value="Squents" ></p:outputLabel>
+                                        </th>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.squint_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.squint_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.squint_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.squint}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.squint_corrected}" ></p:inputText>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>
+                                            <p:outputLabel value="Pallor" ></p:outputLabel>
+                                        </th>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.pallor_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.pallor_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.pallor_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.pallor}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.pallor_corrected}" ></p:inputText>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <p:outputLabel value="Hearing Defects" ></p:outputLabel>
+                                        </th>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.xeropthalmia_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.xeropthalmia_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.xeropthalmia_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.xeropthalmia}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.xeropthalmia_corrected}" ></p:inputText>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>
+                                            <p:outputLabel value="Angular Stomatitis/Glossitis" ></p:outputLabel>
+                                        </th>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.angular_stomatitis_or_glossitis_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.angular_stomatitis_or_glossitis_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.angular_stomatitis_or_glossitis_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.angular_stomatitis_or_glossitis}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.angular_stomatitis_or_glossitis_corrected}" ></p:inputText>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>
+                                            <p:outputLabel value="Dental Caries" ></p:outputLabel>
+                                        </th>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.dental_caries_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.dental_caries_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.dental_caries_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.dental_caries}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.dental_caries_corrected}" ></p:inputText>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>
+                                            <p:outputLabel value="Calculus" ></p:outputLabel>
+                                        </th>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.calculus_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.calculus_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.calculus_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.calculus}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.calculus_corrected}" ></p:inputText>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>
+                                            <p:outputLabel value="Fluorosis" ></p:outputLabel>
+                                        </th>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.fluorosis_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.fluorosis_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.fluorosis_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.fluorosis}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.fluorosis_corrected}" ></p:inputText>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>
+                                            <p:outputLabel value="Maloccultion" ></p:outputLabel>
+                                        </th>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.hearing_defects_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.hearing_defects_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.hearing_defects_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.malocclusion}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.hearing_defects_corrected}" ></p:inputText>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>
+                                            <p:outputLabel value="Goitre" ></p:outputLabel>
+                                        </th>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.goitre_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.goitre_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.goitre_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.malocclusion}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.goitre_corrected}" ></p:inputText>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <th>
+                                            <p:outputLabel value="ENT Defects" ></p:outputLabel>
+                                        </th>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.hearing_defects_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.hearing_defects_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.hearing_defects_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.ent_defects}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText  styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.hearing_defects_corrected}" ></p:inputText>
+                                        </td>
+                                    </tr>
+                                    
+                                    
+                                </table>
 
                             </p:tab>
                             <p:tab title="5. Immunization" >
