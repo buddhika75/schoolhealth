@@ -58,6 +58,19 @@ public class MonthlyStatementOfSchoolHealthActivitiesController implements Seria
         JsfUtil.addErrorMessage("Updated");
     }
 
+    public List<MonthlyStatementOfSchoolHealthActivities> getMonthlyStatements(int y, Area a, Month m) {
+        String j;
+        Map map = new HashMap();
+        j = " select m from MonthlyStatementOfSchoolHealthActivities m "
+                + " where m.phiArea.parentArea=:a "
+                + " and m.statementYear=:y "
+                + " and m.statementMonthEnum=:m";
+        map.put("phi", phiArea);
+        map.put("y", year);
+        map.put("m", month);
+        return getFacade().findBySQL(j, map);
+    }
+
     public String generateMonthlyStatement() {
         MonthlyStatementOfSchoolHealthActivities s;
         String j;

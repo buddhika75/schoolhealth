@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+    <body>
+
+        <ui:composition template="./../template.xhtml">
+
+            <ui:define name="title">
+                Quarterly Health Return
+            </ui:define>
+
+            <ui:define name="body">
+                <p:panel header="Quarterly Health Return" >
+
+
+                    <h:form>
+
+                        <p:commandButton ajax="false" value="Save" action="#{quarterlySchoolHealthReturnController.updateReturn()}" ></p:commandButton>
+
+                        <p:tabView >
+                            <p:tab title="1. Basic Data" >
+
+                            </p:tab>
+                            <p:tab title="2. School Environment" >
+
+                            </p:tab>
+                            <p:tab title="3. Programmes" >
+
+                            </p:tab>
+
+                            <p:tab title="4a. SMI" >
+
+                            </p:tab>
+                            <p:tab title="4b. SMI according to Students" >
+
+                            </p:tab>
+                            <p:tab title="4c. Problems" >
+
+                            </p:tab>
+                            <p:tab title="5. Immunization" >
+
+                            </p:tab>
+                            <p:tab title="6. Health Promoting Schools" >
+
+                            </p:tab>
+                            <p:tab title="3. Return Prepaired By" >
+
+                            </p:tab>
+
+
+
+                        </p:tabView>
+
+                    </h:form>
+
+                </p:panel>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

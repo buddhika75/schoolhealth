@@ -939,6 +939,49 @@ public class WebUserController implements Serializable {
         return getFirstDayOfMonth(c.getTime());
     }
 
+    public Month getFirstMonthOfQuarter(Quarter quarter) {
+        switch (quarter) {
+            case First:
+                return Month.January;
+            case Second:
+                return Month.April;
+            case Thired:
+                return Month.July;
+            case Forth:
+                return Month.October;
+        }
+        return null;
+    }
+
+    public Month getSecondMonthOfQuarter(Quarter quarter) {
+        switch (quarter) {
+            case First:
+                return Month.February;
+            case Second:
+                return Month.May;
+            case Thired:
+                return Month.August;
+            case Forth:
+                return Month.November;
+        }
+        return null;
+
+    }
+
+    public Month getThirdMonthOfQuarter(Quarter quarter) {
+        switch (quarter) {
+            case First:
+                return Month.March;
+            case Second:
+                return Month.June;
+            case Thired:
+                return Month.September;
+            case Forth:
+                return Month.December;
+        }
+        return null;
+    }
+
     public Date getLastDayOfQuarter() {
         Calendar c = Calendar.getInstance();
         int month = c.get(Calendar.MONTH);
@@ -1083,6 +1126,34 @@ public class WebUserController implements Serializable {
                 return Calendar.NOVEMBER;
             case December:
                 return Calendar.DECEMBER;
+        }
+        return null;
+    }
+
+    public Integer getIntQuarter(Quarter quarter) {
+        switch (quarter) {
+            case First:
+                return 1;
+            case Second:
+                return 2;
+            case Thired:
+                return 3;
+            case Forth:
+                return 4;
+        }
+        return null;
+    }
+
+    public Quarter getQuarter(Integer quarter) {
+        switch (quarter) {
+            case 1:
+                return Quarter.First;
+            case 2:
+                return Quarter.Second;
+            case 3:
+                return Quarter.Thired;
+            case 4:
+                return Quarter.Forth;
         }
         return null;
     }

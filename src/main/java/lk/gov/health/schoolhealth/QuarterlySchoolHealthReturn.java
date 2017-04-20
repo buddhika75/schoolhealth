@@ -31,6 +31,7 @@ public class QuarterlySchoolHealthReturn implements Serializable {
     private Area moh_area;
     private int report_year;
     private int report_quarter;
+    private Quarter report_quarter_enum;
 
     private int total_no_of_schools_less_than_200;
     private int total_no_of_schools_more_than_200;
@@ -531,13 +532,17 @@ public class QuarterlySchoolHealthReturn implements Serializable {
 
     @ManyToOne
     private WebUser preparedBy;
-    @Temporal(javax.persistence.TemporalType.DATE)
+    @Temporal(javax.persistence.TemporalType.TIMESTAMP)
     private Date preparedDate;
 
     @ManyToOne
     private WebUser certifiedBy;
-    @Temporal(javax.persistence.TemporalType.DATE)
+    @Temporal(javax.persistence.TemporalType.TIMESTAMP)
     private Date certifiedDate;
+    
+    @Temporal(javax.persistence.TemporalType.TIMESTAMP)
+    Date returnDate;
+    
 
     public Long getId() {
         return id;
@@ -545,6 +550,14 @@ public class QuarterlySchoolHealthReturn implements Serializable {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public Date getReturnDate() {
+        return returnDate;
+    }
+
+    public void setReturnDate(Date returnDate) {
+        this.returnDate = returnDate;
     }
 
     
@@ -3855,4 +3868,14 @@ public class QuarterlySchoolHealthReturn implements Serializable {
         this.certifiedDate = certifiedDate;
     }
 
+    public Quarter getReport_quarter_enum() {
+        return report_quarter_enum;
+    }
+
+    public void setReport_quarter_enum(Quarter report_quarter_enum) {
+        this.report_quarter_enum = report_quarter_enum;
+    }
+
+    
+    
 }

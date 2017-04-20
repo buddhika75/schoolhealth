@@ -11,27 +11,26 @@
         <ui:composition template="./../template.xhtml">
 
             <ui:define name="title">
-                Generate Monthly Statement
+                <p:outputLabel value="Generate Quarterly School Health Return" ></p:outputLabel>
             </ui:define>
 
             <ui:define name="body">
-                <p:panel header="Generate Monthly Statement" >
+                <p:panel header="Generate Quarterly School Health Return" >
                     <h:form >
                         <h:panelGrid columns="2" >
-                            <p:outputLabel value="Year / Month" ></p:outputLabel>
-                            <h:panelGroup >
-                                <p:selectOneMenu value="#{monthlyStatementOfSchoolHealthActivitiesController.year}" >
-                                    <f:selectItems value="#{monthlyStatementOfSchoolHealthActivitiesController.years}" ></f:selectItems>
-                                </p:selectOneMenu>
-                                <p:selectOneMenu value="#{monthlyStatementOfSchoolHealthActivitiesController.month}" >
-                                    <f:selectItems value="#{enumController.months}" ></f:selectItems>
-                                </p:selectOneMenu>
-                            </h:panelGroup>
-                            <p:outputLabel value="PHI Area" ></p:outputLabel>  
-                            <p:selectOneMenu value="#{monthlyStatementOfSchoolHealthActivitiesController.phiArea}" >
-                                <f:selectItems value="#{webUserController.myPhiAreas}" var="a" itemLabel="#{a.name}" itemValue="#{a}" ></f:selectItems>
+                            <p:outputLabel value="Year" ></p:outputLabel>
+                            <p:selectOneMenu value="#{quarterlySchoolHealthReturnController.year}" >
+                                <f:selectItems value="#{monthlyStatementOfSchoolHealthActivitiesController.years}" ></f:selectItems>
                             </p:selectOneMenu>
-                            <p:commandButton ajax="false" value="Generate Monthly Statement" action="#{monthlyStatementOfSchoolHealthActivitiesController.generateMonthlyStatement()}" ></p:commandButton>
+                            <p:outputLabel value="Quarter" ></p:outputLabel>
+                            <p:selectOneMenu value="#{quarterlySchoolHealthReturnController.quarter}" >
+                                <f:selectItems value="#{enumController.quarters}" ></f:selectItems>
+                            </p:selectOneMenu>
+                            <p:outputLabel value="MOH Area" ></p:outputLabel>  
+                            <p:selectOneMenu value="#{quarterlySchoolHealthReturnController.moh}" >
+                                <f:selectItems value="#{webUserController.myMohAreas}" var="a" itemLabel="#{a.name}" itemValue="#{a}" ></f:selectItems>
+                            </p:selectOneMenu>
+                            <p:commandButton ajax="false" value="Generate Quarterly Return" action="#{quarterlySchoolHealthReturnController.generateReturn()}" ></p:commandButton>
                         </h:panelGrid>
 
                     </h:form>
