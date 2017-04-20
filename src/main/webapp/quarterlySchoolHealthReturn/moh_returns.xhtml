@@ -3,24 +3,82 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:p="http://primefaces.org/ui"
-      xmlns:h="http://java.sun.com/jsf/html">
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
 
     <body>
 
         <ui:composition template="./../template.xhtml">
 
             <ui:define name="title">
-                Quarterly School Health Returns Index
+                Quarterly School Health Returns of a selected MOH Area
             </ui:define>
 
             <ui:define name="body">
-                <p:panel header="Quarterly School Health Returns Index" >
+                <p:panel header="Quarterly School Health Returns of a selected MOH Area" >
                     <h:form >
-                        <h:panelGrid columns="1" >
-                            <p:commandButton ajax="false" value="Search Quarterly School Health Returns" action="#{monthlyStatementOfSchoolHealthActivitiesController.toSearchMonthlyStatements()}" ></p:commandButton>
-                            <p:commandButton ajax="false" value="Generate Quarterly School Health Returns" action="#{monthlyStatementOfSchoolHealthActivitiesController.toGenerateMonthlyStatement()}" ></p:commandButton>
-                        
+                        <h:panelGrid columns="2" >
+                            <p:outputLabel value="Year" ></p:outputLabel>
+                            <p:selectOneMenu value="#{quarterlySchoolHealthReturnController.year}" >
+                                <f:selectItems value="#{monthlyStatementOfSchoolHealthActivitiesController.years}" ></f:selectItems>
+                            </p:selectOneMenu>
+                            <p:outputLabel value="Quarter" ></p:outputLabel>
+                            <p:selectOneMenu value="#{quarterlySchoolHealthReturnController.quarter}" >
+                                <f:selectItems value="#{enumController.quarters}" ></f:selectItems>
+                            </p:selectOneMenu>
+                            <p:outputLabel value="MOH Area" ></p:outputLabel>  
+                            <p:selectOneMenu value="#{quarterlySchoolHealthReturnController.moh}" >
+                                <f:selectItems value="#{webUserController.myMohAreas}" var="a" itemLabel="#{a.name}" itemValue="#{a}" ></f:selectItems>
+                            </p:selectOneMenu>
+                            <p:commandButton ajax="false" value="List Quarterly Returns"
+                                             action="#{quarterlySchoolHealthReturnController.listMohReturns()}" ></p:commandButton>
+
                         </h:panelGrid>
+
+                        <p:dataTable value="#{quarterlySchoolHealthReturnController.items}" var="item">
+                            <p:column>
+                                <f:facet name="header">
+                                    <h:outputText value="Report_year"/>
+                                </f:facet>
+                                <h:outputText value="#{item.report_year}"/>
+                            </p:column>
+                            <p:column>
+                                <f:facet name="header">
+                                    <h:outputText value="Report_quarter_enum"/>
+                                </f:facet>
+                                <h:outputText value="#{item.report_quarter_enum}"/>
+                            </p:column>
+                            <p:column>
+                                <f:facet name="header">
+                                    <h:outputText value="Month_1"/>
+                                </f:facet>
+                                <h:outputText value="#{item.month_1}"/>
+                            </p:column>
+                            <p:column>
+                                <f:facet name="header">
+                                    <h:outputText value="Month_2"/>
+                                </f:facet>
+                                <h:outputText value="#{item.month_2}"/>
+                            </p:column>
+                            <p:column>
+                                <f:facet name="header">
+                                    <h:outputText value="Month_3"/>
+                                </f:facet>
+                                <h:outputText value="#{item.month_3}"/>
+                            </p:column>
+                            <p:column>
+                                <f:facet name="header">
+                                    <h:outputText value="Actions"/>
+                                </f:facet>
+                                <p:commandButton ajax="false" value="View" action="#{quarterlySchoolHealthReturnController.toEditReturn()}" >
+                                    <f:setPropertyActionListener value="#{item}" target="#{quarterlySchoolHealthReturnController.selected}" ></f:setPropertyActionListener>
+                                </p:commandButton>
+                                <p:commandButton ajax="false" value="Delete" action="#{quarterlySchoolHealthReturnController.deleteReturn()}" >
+                                    <f:setPropertyActionListener value="#{item}" target="#{quarterlySchoolHealthReturnController.selected}" ></f:setPropertyActionListener>
+                                </p:commandButton>
+
+                            </p:column>
+                        </p:dataTable>
 
                     </h:form>
                 </p:panel>

@@ -41,7 +41,7 @@
                             </p:tab>
                             <p:tab title="4c. Problems" >
 
-                                
+
                                 <table  class="tg"  >
                                     <tr>
                                         <th rowspan="2" colspan="3" >
@@ -58,24 +58,54 @@
                                         <td>
                                             <p:outputLabel value="#{quarterlySchoolHealthReturnController.selected.month_1}" ></p:outputLabel>
                                         </td>
+                                        <td>
+                                            <p:outputLabel value="#{quarterlySchoolHealthReturnController.selected.month_2}" ></p:outputLabel>
+                                        </td>
+                                        <td>
+                                            <p:outputLabel value="#{quarterlySchoolHealthReturnController.selected.month_3}" ></p:outputLabel>
+                                        </td>
                                     </tr>
-                                    
+                                    <tr>
+                                        <td rowspan="4">
+                                            <p:outputLabel value="Stunting" ></p:outputLabel>
+                                        </td>
+                                        <td rowspan="2" >
+                                            <p:outputLabel value="Grade 1" ></p:outputLabel>
+                                        </td>
+                                        <td  >
+                                            <p:outputLabel value="Male" ></p:outputLabel>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.stunting_1_m_fm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.stunting_1_m_sm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.stunting_1_m_tm}" ></p:inputText>
+                                        </td>
+                                        <td>
+                                            <p:inputText styleClass="shortNumbers" value="#{quarterlySchoolHealthReturnController.selected.stunting_1_m}" ></p:inputText>
+                                        </td>
+
+                                    </tr>
+
                                 </table>
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                             </p:tab>
                             <p:tab title="5. Immunization" >
 

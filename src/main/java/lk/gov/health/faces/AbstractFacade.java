@@ -100,18 +100,15 @@ public abstract class AbstractFacade<T> {
         TypedQuery<T> qry = getEntityManager().createQuery(temSQL, entityClass);
         Set s = parameters.entrySet();
         Iterator it = s.iterator();
-        System.out.println("temSQL = " + temSQL);
         while (it.hasNext()) {
             Map.Entry m = (Map.Entry) it.next();
             String pPara = (String) m.getKey();
             if (m.getValue() instanceof Date) {
                 Date pVal = (Date) m.getValue();
                 qry.setParameter(pPara, pVal, TemporalType.DATE);
-                System.out.println( pPara + " = " + pVal);
             } else {
                 Object pVal = (Object) m.getValue();
                 qry.setParameter(pPara, pVal);
-                System.out.println( pPara + " =" + pVal);
             }
         }
         return qry.getResultList();
@@ -145,14 +142,11 @@ public abstract class AbstractFacade<T> {
             Object pVal = m.getValue();
             String pPara = (String) m.getKey();
             if (pVal instanceof Date) {
-                System.out.println("pval is a date");
                 Date d = (Date) pVal;
                 qry.setParameter(pPara, d, tt);
             } else {
-                System.out.println("p val is NOT a date");
                 qry.setParameter(pPara, pVal);
             }
-            System.out.println("Parameter " + pPara + "\t and Val\t " + pVal);
         }
         try {
             return (double) qry.getSingleResult();
@@ -170,14 +164,11 @@ public abstract class AbstractFacade<T> {
             Object pVal = m.getValue();
             String pPara = (String) m.getKey();
             if (pVal instanceof Date) {
-                System.out.println("pval is a date");
                 Date d = (Date) pVal;
                 qry.setParameter(pPara, d, tt);
             } else {
-                System.out.println("p val is NOT a date");
                 qry.setParameter(pPara, pVal);
             }
-            System.out.println("Parameter " + pPara + "\t and Val\t " + pVal);
         }
         try {
             return (Long) qry.getSingleResult();
@@ -200,7 +191,6 @@ public abstract class AbstractFacade<T> {
             } else {
                 qry.setParameter(pPara, pVal);
             }
-            System.out.println("Parameter " + pPara + "\tVal" + pVal);
         }
         qry.setMaxResults(maxRecords);
         return qry.getResultList();
@@ -299,10 +289,8 @@ public abstract class AbstractFacade<T> {
     public T findByField(String fieldName, String fieldValue, boolean withoutRetired) {
         List<T> lstAll = findExact(fieldName, fieldValue, true);
         if (lstAll.isEmpty()) {
-            System.out.println("Null");
             return null;
         } else {
-            System.out.println("Not Null " + lstAll.get(0).toString());
             return lstAll.get(0);
         }
     }
@@ -312,7 +300,6 @@ public abstract class AbstractFacade<T> {
         try {
             return qry.getResultList().get(0);
         } catch (Exception e) {
-            System.out.println(e.getMessage());
             return null;
         }
     }
@@ -395,7 +382,6 @@ public abstract class AbstractFacade<T> {
                 temd = 0.0;
             }
         } catch (Exception e) {
-            System.out.println(e.getMessage());
             temd = 0.0;
         }
         return temd;
@@ -407,7 +393,6 @@ public abstract class AbstractFacade<T> {
         try {
             return (Long) q.getSingleResult();
         } catch (Exception e) {
-            System.out.println(e.getMessage());
             return 0l;
         }
     }
@@ -417,7 +402,6 @@ public abstract class AbstractFacade<T> {
         try {
             return q.getResultList();
         } catch (Exception e) {
-            System.out.println(e.getMessage());
             return null;
         }
     }
@@ -454,13 +438,11 @@ public abstract class AbstractFacade<T> {
             Date pVal = (Date) m.getValue();
             String pPara = (String) m.getKey();
             qry.setParameter(pPara, pVal, TemporalType.DATE);
-            System.out.println("Parameter " + pPara + "\tVal" + pVal);
         }
 
         try {
             return qry.getResultList();
         } catch (Exception e) {
-            System.out.println(e.getMessage());
             return null;
         }
     }
@@ -475,13 +457,11 @@ public abstract class AbstractFacade<T> {
             Date pVal = (Date) m.getValue();
             String pPara = (String) m.getKey();
             qry.setParameter(pPara, pVal, TemporalType.DATE);
-            System.out.println("Parameter " + pPara + "\tVal" + pVal);
         }
 
         try {
             return (Double) qry.getSingleResult();
         } catch (Exception e) {
-            System.out.println(e.getMessage());
             return 0.0;
         }
     }

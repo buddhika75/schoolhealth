@@ -58,16 +58,17 @@ public class MonthlyStatementOfSchoolHealthActivitiesController implements Seria
         JsfUtil.addErrorMessage("Updated");
     }
 
-    public List<MonthlyStatementOfSchoolHealthActivities> getMonthlyStatements(int y, Area a, Month m) {
+    public List<MonthlyStatementOfSchoolHealthActivities> getMonthlyStatementsOfMohArea(int y, Area a, Month m) {
         String j;
         Map map = new HashMap();
         j = " select m from MonthlyStatementOfSchoolHealthActivities m "
                 + " where m.phiArea.parentArea=:a "
                 + " and m.statementYear=:y "
                 + " and m.statementMonthEnum=:m";
-        map.put("a", phiArea);
-        map.put("y", year);
-        map.put("m", month);
+        map.put("a", a);
+        map.put("y", y);
+        map.put("m", m);
+
         return getFacade().findBySQL(j, map);
     }
 
@@ -92,6 +93,7 @@ public class MonthlyStatementOfSchoolHealthActivitiesController implements Seria
             s.setPhiArea(phiArea);
             s.setMohArea(phiArea.getParentArea());
             s.setRdhsArea(phiArea.getParentArea().getParentArea());
+
             getFacade().create(s);
         } else {
             JsfUtil.addErrorMessage("Already Generated. Please selete and generate again");
@@ -161,8 +163,21 @@ public class MonthlyStatementOfSchoolHealthActivitiesController implements Seria
             ssi.setStuntingOfChildrenFemale(sum.getStuntingOfChildrenFemale());
             ssi.setStuntingOfChildrenMalePercentage(sum.getStuntingOfChildrenMalePercentage());
             ssi.setStuntingOfChildren1FemalePercentage(sum.getStuntingOfChildren1FemalePercentage());
-            totalColMonth.setStuntingOfChildrenMale(totalColMonth.getStuntingOfChildrenMale() + ssi.getStuntingOfChildrenMale());
-            totalColMonth.setStuntingOfChildrenFemale(totalColMonth.getStuntingOfChildrenFemale() + ssi.getStuntingOfChildrenFemale());
+
+            totalColMonth.setStuntingOfChildren1Male(totalColMonth.getStuntingOfChildren1Male()+sum.getStuntingOfChildren1Male());
+            totalColMonth.setStuntingOfChildren1Female(totalColMonth.getStuntingOfChildren1Female()+sum.getStuntingOfChildren1Female());
+            totalColMonth.setStuntingOfChildren4Male(totalColMonth.getStuntingOfChildren4Male()+sum.getStuntingOfChildren4Male());
+            totalColMonth.setStuntingOfChildren4Female(totalColMonth.getStuntingOfChildren4Female()+sum.getStuntingOfChildren4Female());
+            totalColMonth.setStuntingOfChildren7Male(totalColMonth.getStuntingOfChildren7Male()+sum.getStuntingOfChildren7Male());
+            totalColMonth.setStuntingOfChildren7Female(totalColMonth.getStuntingOfChildren7Female()+sum.getStuntingOfChildren7Female());
+            totalColMonth.setStuntingOfChildren10Male(totalColMonth.getStuntingOfChildren10Male()+sum.getStuntingOfChildren10Male());
+            totalColMonth.setStuntingOfChildren10Female(totalColMonth.getStuntingOfChildren10Female()+sum.getStuntingOfChildren10Female());
+            totalColMonth.setStuntingOfChildrenOtherMale(totalColMonth.getStuntingOfChildrenOtherMale()+sum.getStuntingOfChildrenOtherMale());
+            totalColMonth.setStuntingOfChildrenOtherFemale(totalColMonth.getStuntingOfChildrenOtherFemale()+sum.getStuntingOfChildrenOtherFemale());
+            totalColMonth.setStuntingOfChildrenMale(totalColMonth.getStuntingOfChildrenMale()+sum.getStuntingOfChildrenMale());
+            totalColMonth.setStuntingOfChildrenFemale(totalColMonth.getStuntingOfChildrenFemale()+sum.getStuntingOfChildrenFemale());
+            totalColMonth.setStuntingOfChildrenMalePercentage(totalColMonth.getStuntingOfChildrenMalePercentage()+sum.getStuntingOfChildrenMalePercentage());
+            totalColMonth.setStuntingOfChildren1FemalePercentage(totalColMonth.getStuntingOfChildren1FemalePercentage()+sum.getStuntingOfChildren1FemalePercentage());
 
 //
             ssi.setWastingOfChildren1Male(sum.getWastingOfChildren1Male());
@@ -1888,6 +1903,9 @@ public class MonthlyStatementOfSchoolHealthActivitiesController implements Seria
         s.setTotalForTheYear(totalColYear);
         s.setNumberCorrectedForTheMonth(totalCorrectedMonth);
         s.setNumberCorrectedForTheYear(totalCorrectedYear);
+
+        System.out.println("s.getId() = " + s.getId());
+        System.out.println("s.getTotalForTheMonth() = " + s.getTotalForTheMonth());
 
         getFacade().edit(s);
         selected = s;

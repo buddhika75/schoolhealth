@@ -30,7 +30,8 @@
                             <p:selectOneMenu value="#{quarterlySchoolHealthReturnController.moh}" >
                                 <f:selectItems value="#{webUserController.myMohAreas}" var="a" itemLabel="#{a.name}" itemValue="#{a}" ></f:selectItems>
                             </p:selectOneMenu>
-                            <p:commandButton ajax="false" value="Generate Quarterly Return" action="#{quarterlySchoolHealthReturnController.generateReturn()}" ></p:commandButton>
+                            <p:commandButton ajax="false" value="Generate Quarterly Return"
+                                             action="#{quarterlySchoolHealthReturnController.generateReturn()}" ></p:commandButton>
                         </h:panelGrid>
 
                     </h:form>

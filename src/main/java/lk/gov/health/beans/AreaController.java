@@ -174,7 +174,6 @@ public class AreaController implements Serializable {
         System.out.println("m = " + m);
         System.out.println("j = " + j);
         List<Area> areas = getFacade().findBySQL(j, m);
-        System.out.println("areas.size() = " + areas.size());
         return areas;
     }
 
