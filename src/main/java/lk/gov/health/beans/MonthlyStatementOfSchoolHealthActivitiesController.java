@@ -1227,10 +1227,9 @@ public class MonthlyStatementOfSchoolHealthActivitiesController implements Seria
                         + sum.getOtherHealthProblem7ChildrenOtherMale()
                         + sum.getOtherHealthProblem7ChildrenOtherFemale());
             }
-            totalColMonth.setLympahdenopathy(totalColMonth.getLympahdenopathy()+ ssi.getLympahdenopathy());
+            totalColMonth.setLympahdenopathy(totalColMonth.getLympahdenopathy() + ssi.getLympahdenopathy());
 
 //          **************************************************************    
-            
             //            *********************************************************************************
             ssi.setEntDefects(sum.getEntDefectsChildren1Male()
                     + sum.getEntDefectsChildren1Female()
@@ -1335,10 +1334,9 @@ public class MonthlyStatementOfSchoolHealthActivitiesController implements Seria
                         + sum.getOtherHealthProblem7ChildrenOtherMale()
                         + sum.getOtherHealthProblem7ChildrenOtherFemale());
             }
-            totalColMonth.setScabies(totalColMonth.getScabies()+ ssi.getScabies());
+            totalColMonth.setScabies(totalColMonth.getScabies() + ssi.getScabies());
 
 //          **************************************************************                
-            
 //          **************************************************************************************
             if (sum.getOtherHealthProblem1() == HealthProblem.Hypopigmented_anaesthetic_patches) {
                 ssi.setHypopigmentedAnaestheticPatches(sum.getOtherHealthProblem1Children1Male()
@@ -1430,7 +1428,7 @@ public class MonthlyStatementOfSchoolHealthActivitiesController implements Seria
                         + sum.getOtherHealthProblem7ChildrenOtherMale()
                         + sum.getOtherHealthProblem7ChildrenOtherFemale());
             }
-            totalColMonth.setHypopigmentedAnaestheticPatches(totalColMonth.getHypopigmentedAnaestheticPatches()+ ssi.getHypopigmentedAnaestheticPatches());
+            totalColMonth.setHypopigmentedAnaestheticPatches(totalColMonth.getHypopigmentedAnaestheticPatches() + ssi.getHypopigmentedAnaestheticPatches());
 
 //          **************************************************************    
 //          **************************************************************************************
@@ -1524,10 +1522,345 @@ public class MonthlyStatementOfSchoolHealthActivitiesController implements Seria
                         + sum.getOtherHealthProblem7ChildrenOtherMale()
                         + sum.getOtherHealthProblem7ChildrenOtherFemale());
             }
-            totalColMonth.setOtherSkinDisorders(totalColMonth.getOtherSkinDisorders()+ ssi.getOtherSkinDisorders());
+            totalColMonth.setOtherSkinDisorders(totalColMonth.getOtherSkinDisorders() + ssi.getOtherSkinDisorders());
 
 //          **************************************************************                
-            
+//          **************************************************************************************
+            if (sum.getOtherHealthProblem1() == HealthProblem.Orthopaedic_defects) {
+                ssi.setOrthopaedicDefects(sum.getOtherHealthProblem1Children1Male()
+                        + sum.getOtherHealthProblem1Children1Female()
+                        + sum.getOtherHealthProblem1Children4Male()
+                        + sum.getOtherHealthProblem1Children4Female()
+                        + sum.getOtherHealthProblem1Children7Male()
+                        + sum.getOtherHealthProblem1Children7Female()
+                        + sum.getOtherHealthProblem1Children10Male()
+                        + sum.getOtherHealthProblem1Children10Female()
+                        + sum.getOtherHealthProblem1ChildrenOtherMale()
+                        + sum.getOtherHealthProblem1ChildrenOtherFemale());
+            }
+
+            if (sum.getOtherHealthProblem2() == HealthProblem.Orthopaedic_defects) {
+                ssi.setOrthopaedicDefects(sum.getOtherHealthProblem2Children1Male()
+                        + sum.getOtherHealthProblem2Children1Female()
+                        + sum.getOtherHealthProblem2Children4Male()
+                        + sum.getOtherHealthProblem2Children4Female()
+                        + sum.getOtherHealthProblem2Children7Male()
+                        + sum.getOtherHealthProblem2Children7Female()
+                        + sum.getOtherHealthProblem2Children10Male()
+                        + sum.getOtherHealthProblem2Children10Female()
+                        + sum.getOtherHealthProblem2ChildrenOtherMale()
+                        + sum.getOtherHealthProblem2ChildrenOtherFemale());
+            }
+
+            if (sum.getOtherHealthProblem3() == HealthProblem.Orthopaedic_defects) {
+                ssi.setOrthopaedicDefects(sum.getOtherHealthProblem3Children1Male()
+                        + sum.getOtherHealthProblem3Children1Female()
+                        + sum.getOtherHealthProblem3Children4Male()
+                        + sum.getOtherHealthProblem3Children4Female()
+                        + sum.getOtherHealthProblem3Children7Male()
+                        + sum.getOtherHealthProblem3Children7Female()
+                        + sum.getOtherHealthProblem3Children10Male()
+                        + sum.getOtherHealthProblem3Children10Female()
+                        + sum.getOtherHealthProblem3ChildrenOtherMale()
+                        + sum.getOtherHealthProblem3ChildrenOtherFemale());
+            }
+
+            if (sum.getOtherHealthProblem4() == HealthProblem.Orthopaedic_defects) {
+                ssi.setOrthopaedicDefects(sum.getOtherHealthProblem1Children1Male()
+                        + sum.getOtherHealthProblem4Children1Female()
+                        + sum.getOtherHealthProblem4Children4Male()
+                        + sum.getOtherHealthProblem4Children4Female()
+                        + sum.getOtherHealthProblem4Children7Male()
+                        + sum.getOtherHealthProblem4Children7Female()
+                        + sum.getOtherHealthProblem4Children10Male()
+                        + sum.getOtherHealthProblem4Children10Female()
+                        + sum.getOtherHealthProblem4ChildrenOtherMale()
+                        + sum.getOtherHealthProblem4ChildrenOtherFemale());
+            }
+
+            if (sum.getOtherHealthProblem5() == HealthProblem.Orthopaedic_defects) {
+                ssi.setOrthopaedicDefects(sum.getOtherHealthProblem5Children1Male()
+                        + sum.getOtherHealthProblem5Children1Female()
+                        + sum.getOtherHealthProblem5Children4Male()
+                        + sum.getOtherHealthProblem5Children4Female()
+                        + sum.getOtherHealthProblem5Children7Male()
+                        + sum.getOtherHealthProblem5Children7Female()
+                        + sum.getOtherHealthProblem5Children10Male()
+                        + sum.getOtherHealthProblem5Children10Female()
+                        + sum.getOtherHealthProblem5ChildrenOtherMale()
+                        + sum.getOtherHealthProblem5ChildrenOtherFemale());
+            }
+
+            if (sum.getOtherHealthProblem6() == HealthProblem.Orthopaedic_defects) {
+                ssi.setOrthopaedicDefects(sum.getOtherHealthProblem1Children1Male()
+                        + sum.getOtherHealthProblem6Children1Female()
+                        + sum.getOtherHealthProblem6Children4Male()
+                        + sum.getOtherHealthProblem6Children4Female()
+                        + sum.getOtherHealthProblem6Children7Male()
+                        + sum.getOtherHealthProblem6Children7Female()
+                        + sum.getOtherHealthProblem6Children10Male()
+                        + sum.getOtherHealthProblem6Children10Female()
+                        + sum.getOtherHealthProblem6ChildrenOtherMale()
+                        + sum.getOtherHealthProblem6ChildrenOtherFemale());
+            }
+
+            if (sum.getOtherHealthProblem7() == HealthProblem.Orthopaedic_defects) {
+                ssi.setOrthopaedicDefects(sum.getOtherHealthProblem7Children1Male()
+                        + sum.getOtherHealthProblem7Children1Female()
+                        + sum.getOtherHealthProblem7Children4Male()
+                        + sum.getOtherHealthProblem7Children4Female()
+                        + sum.getOtherHealthProblem7Children7Male()
+                        + sum.getOtherHealthProblem7Children7Female()
+                        + sum.getOtherHealthProblem7Children10Male()
+                        + sum.getOtherHealthProblem7Children10Female()
+                        + sum.getOtherHealthProblem7ChildrenOtherMale()
+                        + sum.getOtherHealthProblem7ChildrenOtherFemale());
+            }
+            totalColMonth.setOrthopaedicDefects(totalColMonth.getOrthopaedicDefects() + ssi.getOrthopaedicDefects());
+
+//          **************************************************************               
+            //          **************************************************************************************
+            if (sum.getOtherHealthProblem1() == HealthProblem.Rheumatic_disorders) {
+                ssi.setRheumaticDisorders(sum.getOtherHealthProblem1Children1Male()
+                        + sum.getOtherHealthProblem1Children1Female()
+                        + sum.getOtherHealthProblem1Children4Male()
+                        + sum.getOtherHealthProblem1Children4Female()
+                        + sum.getOtherHealthProblem1Children7Male()
+                        + sum.getOtherHealthProblem1Children7Female()
+                        + sum.getOtherHealthProblem1Children10Male()
+                        + sum.getOtherHealthProblem1Children10Female()
+                        + sum.getOtherHealthProblem1ChildrenOtherMale()
+                        + sum.getOtherHealthProblem1ChildrenOtherFemale());
+            }
+
+            if (sum.getOtherHealthProblem2() == HealthProblem.Rheumatic_disorders) {
+                ssi.setRheumaticDisorders(sum.getOtherHealthProblem2Children1Male()
+                        + sum.getOtherHealthProblem2Children1Female()
+                        + sum.getOtherHealthProblem2Children4Male()
+                        + sum.getOtherHealthProblem2Children4Female()
+                        + sum.getOtherHealthProblem2Children7Male()
+                        + sum.getOtherHealthProblem2Children7Female()
+                        + sum.getOtherHealthProblem2Children10Male()
+                        + sum.getOtherHealthProblem2Children10Female()
+                        + sum.getOtherHealthProblem2ChildrenOtherMale()
+                        + sum.getOtherHealthProblem2ChildrenOtherFemale());
+            }
+
+            if (sum.getOtherHealthProblem3() == HealthProblem.Rheumatic_disorders) {
+                ssi.setRheumaticDisorders(sum.getOtherHealthProblem3Children1Male()
+                        + sum.getOtherHealthProblem3Children1Female()
+                        + sum.getOtherHealthProblem3Children4Male()
+                        + sum.getOtherHealthProblem3Children4Female()
+                        + sum.getOtherHealthProblem3Children7Male()
+                        + sum.getOtherHealthProblem3Children7Female()
+                        + sum.getOtherHealthProblem3Children10Male()
+                        + sum.getOtherHealthProblem3Children10Female()
+                        + sum.getOtherHealthProblem3ChildrenOtherMale()
+                        + sum.getOtherHealthProblem3ChildrenOtherFemale());
+            }
+
+            if (sum.getOtherHealthProblem4() == HealthProblem.Rheumatic_disorders) {
+                ssi.setRheumaticDisorders(sum.getOtherHealthProblem1Children1Male()
+                        + sum.getOtherHealthProblem4Children1Female()
+                        + sum.getOtherHealthProblem4Children4Male()
+                        + sum.getOtherHealthProblem4Children4Female()
+                        + sum.getOtherHealthProblem4Children7Male()
+                        + sum.getOtherHealthProblem4Children7Female()
+                        + sum.getOtherHealthProblem4Children10Male()
+                        + sum.getOtherHealthProblem4Children10Female()
+                        + sum.getOtherHealthProblem4ChildrenOtherMale()
+                        + sum.getOtherHealthProblem4ChildrenOtherFemale());
+            }
+
+            if (sum.getOtherHealthProblem5() == HealthProblem.Rheumatic_disorders) {
+                ssi.setRheumaticDisorders(sum.getOtherHealthProblem5Children1Male()
+                        + sum.getOtherHealthProblem5Children1Female()
+                        + sum.getOtherHealthProblem5Children4Male()
+                        + sum.getOtherHealthProblem5Children4Female()
+                        + sum.getOtherHealthProblem5Children7Male()
+                        + sum.getOtherHealthProblem5Children7Female()
+                        + sum.getOtherHealthProblem5Children10Male()
+                        + sum.getOtherHealthProblem5Children10Female()
+                        + sum.getOtherHealthProblem5ChildrenOtherMale()
+                        + sum.getOtherHealthProblem5ChildrenOtherFemale());
+            }
+
+            if (sum.getOtherHealthProblem6() == HealthProblem.Rheumatic_disorders) {
+                ssi.setRheumaticDisorders(sum.getOtherHealthProblem1Children1Male()
+                        + sum.getOtherHealthProblem6Children1Female()
+                        + sum.getOtherHealthProblem6Children4Male()
+                        + sum.getOtherHealthProblem6Children4Female()
+                        + sum.getOtherHealthProblem6Children7Male()
+                        + sum.getOtherHealthProblem6Children7Female()
+                        + sum.getOtherHealthProblem6Children10Male()
+                        + sum.getOtherHealthProblem6Children10Female()
+                        + sum.getOtherHealthProblem6ChildrenOtherMale()
+                        + sum.getOtherHealthProblem6ChildrenOtherFemale());
+            }
+
+            if (sum.getOtherHealthProblem7() == HealthProblem.Rheumatic_disorders) {
+                ssi.setRheumaticDisorders(sum.getOtherHealthProblem7Children1Male()
+                        + sum.getOtherHealthProblem7Children1Female()
+                        + sum.getOtherHealthProblem7Children4Male()
+                        + sum.getOtherHealthProblem7Children4Female()
+                        + sum.getOtherHealthProblem7Children7Male()
+                        + sum.getOtherHealthProblem7Children7Female()
+                        + sum.getOtherHealthProblem7Children10Male()
+                        + sum.getOtherHealthProblem7Children10Female()
+                        + sum.getOtherHealthProblem7ChildrenOtherMale()
+                        + sum.getOtherHealthProblem7ChildrenOtherFemale());
+            }
+            totalColMonth.setRheumaticDisorders(totalColMonth.getRheumaticDisorders() + ssi.getRheumaticDisorders());
+
+//          **************************************************************               
+            //            *********************************************************************************
+            ssi.setHeartDeceases(sum.getHeartDeceasesChildren1Male()
+                    + sum.getHeartDeceasesChildren1Female()
+                    + sum.getHeartDeceasesChildren4Male()
+                    + sum.getHeartDeceasesChildren4Female()
+                    + sum.getHeartDeceasesChildren7Male()
+                    + sum.getHeartDeceasesChildren7Female()
+                    + sum.getHeartDeceasesChildren10Male()
+                    + sum.getHeartDeceasesChildren10Female()
+                    + sum.getHeartDeceasesChildrenOtherMale()
+                    + sum.getHeartDeceasesChildrenOtherFemale());
+            totalColMonth.setHeartDeceases(totalColMonth.getHeartDeceases() + ssi.getHeartDeceases());
+            //            **************************************************************************************
+
+            //          **************************************************************************************
+            if (sum.getOtherHealthProblem1() == HealthProblem.Lung_diseases) {
+                ssi.setLungDiseases(sum.getOtherHealthProblem1Children1Male()
+                        + sum.getOtherHealthProblem1Children1Female()
+                        + sum.getOtherHealthProblem1Children4Male()
+                        + sum.getOtherHealthProblem1Children4Female()
+                        + sum.getOtherHealthProblem1Children7Male()
+                        + sum.getOtherHealthProblem1Children7Female()
+                        + sum.getOtherHealthProblem1Children10Male()
+                        + sum.getOtherHealthProblem1Children10Female()
+                        + sum.getOtherHealthProblem1ChildrenOtherMale()
+                        + sum.getOtherHealthProblem1ChildrenOtherFemale());
+            }
+
+            if (sum.getOtherHealthProblem2() == HealthProblem.Lung_diseases) {
+                ssi.setLungDiseases(sum.getOtherHealthProblem2Children1Male()
+                        + sum.getOtherHealthProblem2Children1Female()
+                        + sum.getOtherHealthProblem2Children4Male()
+                        + sum.getOtherHealthProblem2Children4Female()
+                        + sum.getOtherHealthProblem2Children7Male()
+                        + sum.getOtherHealthProblem2Children7Female()
+                        + sum.getOtherHealthProblem2Children10Male()
+                        + sum.getOtherHealthProblem2Children10Female()
+                        + sum.getOtherHealthProblem2ChildrenOtherMale()
+                        + sum.getOtherHealthProblem2ChildrenOtherFemale());
+            }
+
+            if (sum.getOtherHealthProblem3() == HealthProblem.Lung_diseases) {
+                ssi.setLungDiseases(sum.getOtherHealthProblem3Children1Male()
+                        + sum.getOtherHealthProblem3Children1Female()
+                        + sum.getOtherHealthProblem3Children4Male()
+                        + sum.getOtherHealthProblem3Children4Female()
+                        + sum.getOtherHealthProblem3Children7Male()
+                        + sum.getOtherHealthProblem3Children7Female()
+                        + sum.getOtherHealthProblem3Children10Male()
+                        + sum.getOtherHealthProblem3Children10Female()
+                        + sum.getOtherHealthProblem3ChildrenOtherMale()
+                        + sum.getOtherHealthProblem3ChildrenOtherFemale());
+            }
+
+            if (sum.getOtherHealthProblem4() == HealthProblem.Lung_diseases) {
+                ssi.setLungDiseases(sum.getOtherHealthProblem1Children1Male()
+                        + sum.getOtherHealthProblem4Children1Female()
+                        + sum.getOtherHealthProblem4Children4Male()
+                        + sum.getOtherHealthProblem4Children4Female()
+                        + sum.getOtherHealthProblem4Children7Male()
+                        + sum.getOtherHealthProblem4Children7Female()
+                        + sum.getOtherHealthProblem4Children10Male()
+                        + sum.getOtherHealthProblem4Children10Female()
+                        + sum.getOtherHealthProblem4ChildrenOtherMale()
+                        + sum.getOtherHealthProblem4ChildrenOtherFemale());
+            }
+
+            if (sum.getOtherHealthProblem5() == HealthProblem.Lung_diseases) {
+                ssi.setLungDiseases(sum.getOtherHealthProblem5Children1Male()
+                        + sum.getOtherHealthProblem5Children1Female()
+                        + sum.getOtherHealthProblem5Children4Male()
+                        + sum.getOtherHealthProblem5Children4Female()
+                        + sum.getOtherHealthProblem5Children7Male()
+                        + sum.getOtherHealthProblem5Children7Female()
+                        + sum.getOtherHealthProblem5Children10Male()
+                        + sum.getOtherHealthProblem5Children10Female()
+                        + sum.getOtherHealthProblem5ChildrenOtherMale()
+                        + sum.getOtherHealthProblem5ChildrenOtherFemale());
+            }
+
+            if (sum.getOtherHealthProblem6() == HealthProblem.Lung_diseases) {
+                ssi.setLungDiseases(sum.getOtherHealthProblem1Children1Male()
+                        + sum.getOtherHealthProblem6Children1Female()
+                        + sum.getOtherHealthProblem6Children4Male()
+                        + sum.getOtherHealthProblem6Children4Female()
+                        + sum.getOtherHealthProblem6Children7Male()
+                        + sum.getOtherHealthProblem6Children7Female()
+                        + sum.getOtherHealthProblem6Children10Male()
+                        + sum.getOtherHealthProblem6Children10Female()
+                        + sum.getOtherHealthProblem6ChildrenOtherMale()
+                        + sum.getOtherHealthProblem6ChildrenOtherFemale());
+            }
+
+            if (sum.getOtherHealthProblem7() == HealthProblem.Lung_diseases) {
+                ssi.setLungDiseases(sum.getOtherHealthProblem7Children1Male()
+                        + sum.getOtherHealthProblem7Children1Female()
+                        + sum.getOtherHealthProblem7Children4Male()
+                        + sum.getOtherHealthProblem7Children4Female()
+                        + sum.getOtherHealthProblem7Children7Male()
+                        + sum.getOtherHealthProblem7Children7Female()
+                        + sum.getOtherHealthProblem7Children10Male()
+                        + sum.getOtherHealthProblem7Children10Female()
+                        + sum.getOtherHealthProblem7ChildrenOtherMale()
+                        + sum.getOtherHealthProblem7ChildrenOtherFemale());
+            }
+            totalColMonth.setLungDiseases(totalColMonth.getLungDiseases() + ssi.getLungDiseases());
+
+//          **************************************************************              
+            //            *********************************************************************************
+            ssi.setAsthma(sum.getAsthmaChildren1Male()
+                    + sum.getAsthmaChildren1Female()
+                    + sum.getAsthmaChildren4Male()
+                    + sum.getAsthmaChildren4Female()
+                    + sum.getAsthmaChildren7Male()
+                    + sum.getAsthmaChildren7Female()
+                    + sum.getAsthmaChildren10Male()
+                    + sum.getAsthmaChildren10Female()
+                    + sum.getAsthmaChildrenOtherMale()
+                    + sum.getAsthmaChildrenOtherFemale());
+            totalColMonth.setAsthma(totalColMonth.getAsthma() + ssi.getAsthma());
+            //            **************************************************************************************
+            //            *********************************************************************************
+            ssi.setBehaviouralProblems(sum.getBehaviouralProblemsChildren1Male()
+                    + sum.getBehaviouralProblemsChildren1Female()
+                    + sum.getBehaviouralProblemsChildren4Male()
+                    + sum.getBehaviouralProblemsChildren4Female()
+                    + sum.getBehaviouralProblemsChildren7Male()
+                    + sum.getBehaviouralProblemsChildren7Female()
+                    + sum.getBehaviouralProblemsChildren10Male()
+                    + sum.getBehaviouralProblemsChildren10Female()
+                    + sum.getBehaviouralProblemsChildrenOtherMale()
+                    + sum.getBehaviouralProblemsChildrenOtherFemale());
+            totalColMonth.setBehaviouralProblems(totalColMonth.getBehaviouralProblems() + ssi.getBehaviouralProblems());
+            //            **************************************************************************************
+            //            *********************************************************************************
+            ssi.setLearningDifficulties(sum.getLearningDifficultiesChildren1Male()
+                    + sum.getLearningDifficultiesChildren1Female()
+                    + sum.getLearningDifficultiesChildren4Male()
+                    + sum.getLearningDifficultiesChildren4Female()
+                    + sum.getLearningDifficultiesChildren7Male()
+                    + sum.getLearningDifficultiesChildren7Female()
+                    + sum.getLearningDifficultiesChildren10Male()
+                    + sum.getLearningDifficultiesChildren10Female()
+                    + sum.getLearningDifficultiesChildrenOtherMale()
+                    + sum.getLearningDifficultiesChildrenOtherFemale());
+            totalColMonth.setLearningDifficulties(totalColMonth.getLearningDifficulties() + ssi.getLearningDifficulties());
+            //            **************************************************************************************
+
             /**
              *
              *

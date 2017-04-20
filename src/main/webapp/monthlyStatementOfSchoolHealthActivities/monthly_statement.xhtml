@@ -1754,9 +1754,169 @@
                                                 </td>
                                             </tr>
 
-                                            
-                                            
-                                            
+                                            <tr>
+                                                <th  >
+                                                    <p:outputLabel value="Othopaedia Defects" ></p:outputLabel>
+                                                </th>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.orthopaedicDefects}"  styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.orthopaedicDefects}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheYear.orthopaedicDefects}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheMonth.orthopaedicDefects}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheYear.orthopaedicDefects}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th  >
+                                                    <p:outputLabel value="Rheumatic Disorders" ></p:outputLabel>
+                                                </th>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.rheumaticDisorders}"  styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.rheumaticDisorders}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheYear.rheumaticDisorders}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheMonth.rheumaticDisorders}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheYear.rheumaticDisorders}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th  >
+                                                    <p:outputLabel value="Heart problems" ></p:outputLabel>
+                                                </th>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.heartDeceases}"  styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.heartDeceases}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheYear.heartDeceases}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheMonth.heartDeceases}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheYear.heartDeceases}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th  >
+                                                    <p:outputLabel value="Lung Diseases" ></p:outputLabel>
+                                                </th>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.lungDiseases}"  styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.lungDiseases}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheYear.lungDiseases}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheMonth.lungDiseases}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheYear.lungDiseases}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th  >
+                                                    <p:outputLabel value="Bronchial Asthma" ></p:outputLabel>
+                                                </th>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.asthma}"  styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.asthma}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheYear.asthma}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheMonth.asthma}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheYear.asthma}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th  >
+                                                    <p:outputLabel value="Behavioural Problems" ></p:outputLabel>
+                                                </th>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.behaviouralProblems}"  styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.behaviouralProblems}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheYear.behaviouralProblems}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheMonth.behaviouralProblems}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheYear.behaviouralProblems}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th  >
+                                                    <p:outputLabel value="Learning Difficulties" ></p:outputLabel>
+                                                </th>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.learningDifficulties}"  styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.learningDifficulties}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheYear.learningDifficulties}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheMonth.learningDifficulties}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheYear.learningDifficulties}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                            </tr>
+
+
+
                                         </table>
                                     </p:tab>
 
