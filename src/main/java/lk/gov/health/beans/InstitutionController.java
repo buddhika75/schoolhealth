@@ -39,10 +39,39 @@ public class InstitutionController implements Serializable {
         return "/institution/add_school";
     }
 
+    public String toEditSchool() {
+        if (selected == null) {
+            JsfUtil.addErrorMessage("Nothing Selected");
+            return "";
+        }
+        return "/institution/add_school";
+    }
+
+    public String deleteSchool() {
+        if (selected == null) {
+            JsfUtil.addErrorMessage("Nothing Selected");
+            return "";
+        }
+        try {
+            getFacade().remove(selected);
+            JsfUtil.addSuccessMessage("Deleted");
+        } catch (Exception e) {
+            JsfUtil.addErrorMessage("Error. " + e.getMessage());
+            return "";
+        }
+
+        return "/institution/index";
+    }
+
     public String saveNewSchool() {
-        selected.setCreateAt(new Date());
-        getFacade().create(selected);
-        JsfUtil.addSuccessMessage("New School Created");
+        if (selected.getId() == null) {
+            selected.setCreateAt(new Date());
+            getFacade().create(selected);
+            JsfUtil.addSuccessMessage("New School Created");
+        } else {
+            getFacade().edit(selected);
+            JsfUtil.addSuccessMessage("School Details updated");
+        }
         selected = null;
         return "/institution/index";
     }

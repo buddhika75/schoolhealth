@@ -20,35 +20,70 @@
 
 
                     <h:form>
-                        <p:panelGrid columns="2">
-                            <p:outputLabel value="Type:" for="type" />
-                            <p:outputLabel id="type" value="#{institutionController.selected.type}" title="Type" />
-                            <p:outputLabel value="Name:" for="name" />
-                            <p:inputText id="name" value="#{institutionController.selected.name}" title="Name" />
-                            <p:outputLabel value="School Census No." for="code" />
-                            <p:inputText id="code" value="#{institutionController.selected.code}" title="Code" />
-                            <p:outputLabel value="Address:" for="address" />
-                            <p:inputTextarea rows="4" cols="30" id="address" value="#{institutionController.selected.address}" title="Address" />
-                            <p:outputLabel value="Telephone:" for="telephone" />
-                            <p:inputText id="telephone" value="#{institutionController.selected.telephone}" title="Telephone" />
-                            <p:outputLabel value="Email:" for="email" />
-                            <p:inputText id="email" value="#{institutionController.selected.email}" title="Email" />
-                            <p:outputLabel value="Fax:" for="fax" />
-                            <p:inputText id="fax" value="#{institutionController.selected.fax}" title="Fax" />
-                            <p:outputLabel value="PHI Area:" for="area" />
-                            <p:selectOneMenu id="area" value="#{institutionController.selected.phiArea}" >
-                                <f:selectItems value="#{webUserController.myPhiAreas}" var="a" itemLabel="#{a.name}" itemValue="#{a}" />
-                            </p:selectOneMenu>
-                            <p:outputLabel value="Educational Zone:" for="ea" />
-                            <p:selectOneMenu id="ea" value="#{institutionController.selected.educationalZone}" >
-                                <f:selectItems value="#{webUserController.myEducationalZones}" var="e"
-                                               itemLabel="#{e.name}" itemValue="#{e}" />
-                            </p:selectOneMenu>
-                            <p:outputLabel value="Type of School:" for="ty" />
-                            <p:selectOneMenu id="ty" value="#{institutionController.selected.typeOfSchool}" >
-                                <f:selectItems value="#{enumController.typesOfSchool}"/>
-                            </p:selectOneMenu>
-                        </p:panelGrid>
+                        <p:tabView >
+                            <p:tab title="Main Details" >
+                                <p:panelGrid columns="2">
+                                    <p:outputLabel value="Name:" for="name" />
+                                    <p:inputText id="name" value="#{institutionController.selected.name}" title="Name" />
+                                    <p:outputLabel value="School Census No." for="code" />
+                                    <p:inputText id="code" value="#{institutionController.selected.code}" title="Code" />
+                                    <p:outputLabel value="Address:" for="address" />
+                                    <p:inputTextarea rows="4" cols="30" id="address" value="#{institutionController.selected.address}" title="Address" />
+                                    <p:outputLabel value="Telephone:" for="telephone" />
+                                    <p:inputText id="telephone" value="#{institutionController.selected.telephone}" title="Telephone" />
+                                    <p:outputLabel value="Email:" for="email" />
+                                    <p:inputText id="email" value="#{institutionController.selected.email}" title="Email" />
+                                    <p:outputLabel value="Fax:" for="fax" />
+                                    <p:inputText id="fax" value="#{institutionController.selected.fax}" title="Fax" />
+                                    <p:outputLabel value="PHI Area:" for="area" />
+                                    <p:selectOneMenu id="area" value="#{institutionController.selected.phiArea}" >
+                                        <f:selectItems value="#{webUserController.myPhiAreas}" var="a" itemLabel="#{a.name}" itemValue="#{a}" />
+                                    </p:selectOneMenu>
+                                    <p:outputLabel value="Educational Zone:" for="ea" />
+                                    <p:selectOneMenu id="ea" value="#{institutionController.selected.educationalZone}" >
+                                        <f:selectItems value="#{webUserController.myEducationalZones}" var="e"
+                                                       itemLabel="#{e.name}" itemValue="#{e}" />
+                                    </p:selectOneMenu>
+                                    <p:outputLabel value="Type of School:" for="ty" />
+                                    <p:selectOneMenu id="ty" value="#{institutionController.selected.typeOfSchool}" >
+                                        <f:selectItems value="#{enumController.typesOfSchool}"/>
+                                    </p:selectOneMenu>
+                                </p:panelGrid>
+                            </p:tab>
+                            <p:tab title="Counts" >
+
+
+                                <p:panelGrid columns="2">
+                                     <p:outputLabel value="Male_students:" for="male_students" />
+                                    <p:inputText id="male_students" value="#{institutionController.selected.male_students}" title="Male_students" />
+                                    <p:outputLabel value="Female_students:" for="female_students" />
+                                    <p:inputText id="female_students" value="#{institutionController.selected.female_students}" title="Female_students" />
+                                    <p:outputLabel value="Year_one_male_students:" for="year_one_male_students" />
+                                    <p:inputText id="year_one_male_students" value="#{institutionController.selected.year_one_male_students}" title="Year_one_male_students" />
+                                    <p:outputLabel value="Year_four_male_students:" for="year_four_male_students" />
+                                    <p:inputText id="year_four_male_students" value="#{institutionController.selected.year_four_male_students}" title="Year_four_male_students" />
+                                    <p:outputLabel value="Year_seven_male_students:" for="year_seven_male_students" />
+                                    <p:inputText id="year_seven_male_students" value="#{institutionController.selected.year_seven_male_students}" title="Year_seven_male_students" />
+                                    <p:outputLabel value="Year_ten_male_students:" for="year_ten_male_students" />
+                                    <p:inputText id="year_ten_male_students" value="#{institutionController.selected.year_ten_male_students}" title="Year_ten_male_students" />
+                                    <p:outputLabel value="Year_other_male_students:" for="year_other_male_students" />
+                                    <p:inputText id="year_other_male_students" value="#{institutionController.selected.year_other_male_students}" title="Year_other_male_students" />
+                                    <p:outputLabel value="Year_one_female_students:" for="year_one_female_students" />
+                                    <p:inputText id="year_one_female_students" value="#{institutionController.selected.year_one_female_students}" title="Year_one_female_students" />
+                                    <p:outputLabel value="Year_four_female_students:" for="year_four_female_students" />
+                                    <p:inputText id="year_four_female_students" value="#{institutionController.selected.year_four_female_students}" title="Year_four_female_students" />
+                                    <p:outputLabel value="Year_seven_female_students:" for="year_seven_female_students" />
+                                    <p:inputText id="year_seven_female_students" value="#{institutionController.selected.year_seven_female_students}" title="Year_seven_female_students" />
+                                    <p:outputLabel value="Year_ten_female_students:" for="year_ten_female_students" />
+                                    <p:inputText id="year_ten_female_students" value="#{institutionController.selected.year_ten_female_students}" title="Year_ten_female_students" />
+                                    <p:outputLabel value="Year_other_female_students:" for="year_other_female_students" />
+                                    <p:inputText id="year_other_female_students" value="#{institutionController.selected.year_other_female_students}" title="Year_other_female_students" />
+                                </p:panelGrid>
+
+
+                            </p:tab>
+                        </p:tabView>
+
                         <p:commandButton ajax="false" value="Save" action="#{institutionController.saveNewSchool()}" ></p:commandButton>
                     </h:form>
                 </f:view>

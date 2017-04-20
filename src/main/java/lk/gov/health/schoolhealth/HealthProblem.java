@@ -34,7 +34,7 @@ public enum HealthProblem {
     Angular_stomatitis_Glossitis,
     Fluorosis,
     Malocclusion,
-    Giotre,
+    Goitre,
     Lymphadenopathy,
     Scabies,
     Hypopigmented_anaesthetic_patches,

@@ -43,7 +43,7 @@
                                     </h:panelGroup>
                                 </h:panelGrid>
                                 <p:commandButton ajax="false" value="Save" action="#{monthlyStatementOfSchoolHealthActivitiesController.updateMonthlyStatement()}" ></p:commandButton>
-                                <p:tabView activeIndex="3">
+                                <p:tabView activeIndex="6">
                                     <p:tab title="1. Basic Details" ></p:tab>
                                     <p:tab title="2. School Environment" ></p:tab>
                                     <p:tab title="3. Health Promotion and Educational Programmes" ></p:tab>
@@ -664,10 +664,1102 @@
 
 
                                         </table>
-
                                     </p:tab>
-                                    <p:tab title="5. Health Promotion and Educational Programmes" ></p:tab>
-                                    <p:tab title="6. School Medical Inspection Summery" ></p:tab>
+                                    <p:tab title="5. SMI Summery" >
+                                    </p:tab>
+                                    <p:tab title="6. Problems Detected 1" >
+                                        <table  class="tg"  >
+                                            <tr>
+                                                <th colspan="3">
+                                                    <p:outputLabel value="School" ></p:outputLabel>
+                                                </th>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <th>
+                                                        <p:outputLabel value="#{sr.summeryOfSchoolMedicalInspection.school.name}" ></p:outputLabel>
+                                                    </th>
+                                                </ui:repeat>
+                                                <th rowspan="2" >
+                                                    <p:outputLabel value="Total" ></p:outputLabel>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th colspan="3">
+                                                    <p:outputLabel value="Date" ></p:outputLabel>
+                                                </th>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <th>
+                                                        <p:outputLabel value="#{sr.summeryOfSchoolMedicalInspection.dateExamined}" >
+                                                            <f:convertDateTime pattern="dd MM yyyy" ></f:convertDateTime>
+                                                        </p:outputLabel>
+                                                    </th>
+                                                </ui:repeat>
+                                            </tr>
+
+                                            <tr>
+                                                <th rowspan="4" >
+                                                    <p:outputLabel value="Stunting" ></p:outputLabel>
+                                                </th>
+                                                <th rowspan="2" >
+                                                    <p:outputLabel value="Grade 1" ></p:outputLabel>
+                                                </th>
+                                                <td>
+                                                    <p:outputLabel value="Male" ></p:outputLabel>
+                                                </td>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.stuntingOfChildren1Male}"  styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.stuntingOfChildren1Male}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <p:outputLabel value="Female" ></p:outputLabel>
+                                                </td>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.stuntingOfChildren1Female}"  styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.stuntingOfChildren1Female}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th rowspan="2" >
+                                                    <p:outputLabel value="Grade 4" ></p:outputLabel>
+                                                </th>
+                                                <td>
+                                                    <p:outputLabel value="Male" ></p:outputLabel>
+                                                </td>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.stuntingOfChildren4Male}"  styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.stuntingOfChildren4Male}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <p:outputLabel value="Female" ></p:outputLabel>
+                                                </td>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.stuntingOfChildren4Female}"  styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.stuntingOfChildren4Female}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th rowspan="10">
+                                                    <p:outputLabel value="Wasting" ></p:outputLabel>
+                                                </th>
+                                                <td rowspan="2" >
+                                                    <p:outputLabel value="Grade 1" ></p:outputLabel>
+                                                </td>
+                                                <td>
+                                                    <p:outputLabel value="Male" ></p:outputLabel>
+                                                </td>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.wastingOfChildren1Male}" styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.wastingOfChildren1Male}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <p:outputLabel value="Female" ></p:outputLabel>
+                                                </td>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.wastingOfChildren1Female}" styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.wastingOfChildren1Female}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+
+                                            </tr>
+
+
+                                            <tr>
+                                                <td rowspan="2" >
+                                                    <p:outputLabel value="Grade 4" ></p:outputLabel>
+                                                </td>
+                                                <td>
+                                                    <p:outputLabel value="Male" ></p:outputLabel>
+                                                </td>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.wastingOfChildren4Male}" styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.wastingOfChildren4Male}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <p:outputLabel value="Female" ></p:outputLabel>
+                                                </td>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.wastingOfChildren4Female}" styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.wastingOfChildren4Female}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+
+                                            </tr>
+
+                                            <tr>
+                                                <td rowspan="2" >
+                                                    <p:outputLabel value="Grade 7" ></p:outputLabel>
+                                                </td>
+                                                <td>
+                                                    <p:outputLabel value="Male" ></p:outputLabel>
+                                                </td>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.wastingOfChildren7Male}" styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.wastingOfChildren7Male}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <p:outputLabel value="Female" ></p:outputLabel>
+                                                </td>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.wastingOfChildren7Female}" styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.wastingOfChildren7Female}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+
+                                            </tr>
+
+                                            <tr>
+                                                <td rowspan="2" >
+                                                    <p:outputLabel value="Grade 10" ></p:outputLabel>
+                                                </td>
+                                                <td>
+                                                    <p:outputLabel value="Male" ></p:outputLabel>
+                                                </td>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.wastingOfChildren10Female}" styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.wastingOfChildren10Female}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <p:outputLabel value="Female" ></p:outputLabel>
+                                                </td>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.wastingOfChildren10Female}" styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.wastingOfChildren10Female}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+
+                                            </tr>
+
+                                            <tr>
+                                                <td rowspan="2" >
+                                                    <p:outputLabel value="Other Grades" ></p:outputLabel>
+                                                </td>
+                                                <td>
+                                                    <p:outputLabel value="Male" ></p:outputLabel>
+                                                </td>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.wastingOfChildrenOtherMale}" styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.wastingOfChildrenOtherMale}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <p:outputLabel value="Female" ></p:outputLabel>
+                                                </td>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.wastingOfChildrenOtherFemale}" styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.wastingOfChildrenOtherFemale}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+
+                                            </tr>
+
+
+
+                                            <tr>
+                                                <th rowspan="10">
+                                                    <p:outputLabel value="Overweight" ></p:outputLabel>
+                                                </th>
+                                                <td rowspan="2" >
+                                                    <p:outputLabel value="Grade 1" ></p:outputLabel>
+                                                </td>
+                                                <td>
+                                                    <p:outputLabel value="Male" ></p:outputLabel>
+                                                </td>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.overweightOfChildren1Male}" styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.overweightOfChildren1Male}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <p:outputLabel value="Female" ></p:outputLabel>
+                                                </td>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.overweightOfChildren1Female}" styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.overweightOfChildren1Female}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+
+                                            </tr>
+
+
+                                            <tr>
+                                                <td rowspan="2" >
+                                                    <p:outputLabel value="Grade 4" ></p:outputLabel>
+                                                </td>
+                                                <td>
+                                                    <p:outputLabel value="Male" ></p:outputLabel>
+                                                </td>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.overweightOfChildren4Male}" styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.overweightOfChildren4Male}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <p:outputLabel value="Female" ></p:outputLabel>
+                                                </td>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.overweightOfChildren4Female}" styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.overweightOfChildren4Female}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+
+                                            </tr>
+
+                                            <tr>
+                                                <td rowspan="2" >
+                                                    <p:outputLabel value="Grade 7" ></p:outputLabel>
+                                                </td>
+                                                <td>
+                                                    <p:outputLabel value="Male" ></p:outputLabel>
+                                                </td>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.overweightOfChildren7Male}" styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.overweightOfChildren7Male}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <p:outputLabel value="Female" ></p:outputLabel>
+                                                </td>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.overweightOfChildren7Female}" styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.overweightOfChildren7Female}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+
+                                            </tr>
+
+                                            <tr>
+                                                <td rowspan="2" >
+                                                    <p:outputLabel value="Grade 10" ></p:outputLabel>
+                                                </td>
+                                                <td>
+                                                    <p:outputLabel value="Male" ></p:outputLabel>
+                                                </td>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.overweightOfChildren10Male}" styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.overweightOfChildren10Male}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <p:outputLabel value="Female" ></p:outputLabel>
+                                                </td>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.overweightOfChildren10Female}" styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.overweightOfChildren10Female}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+
+                                            </tr>
+
+                                            <tr>
+                                                <td rowspan="2" >
+                                                    <p:outputLabel value="Other Grades" ></p:outputLabel>
+                                                </td>
+                                                <td>
+                                                    <p:outputLabel value="Male" ></p:outputLabel>
+                                                </td>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.overweightOfChildrenOtherMale}" styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.overweightOfChildrenOtherMale}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <p:outputLabel value="Female" ></p:outputLabel>
+                                                </td>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.overweightOfChildrenOtherFemale}" styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.overweightOfChildrenOtherFemale}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th rowspan="10">
+                                                    <p:outputLabel value="Obesity" ></p:outputLabel>
+                                                </th>
+                                                <td rowspan="2" >
+                                                    <p:outputLabel value="Grade 1" ></p:outputLabel>
+                                                </td>
+                                                <td>
+                                                    <p:outputLabel value="Male" ></p:outputLabel>
+                                                </td>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.obesityChildren1Male}" styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.obesityChildren1Male}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <p:outputLabel value="Female" ></p:outputLabel>
+                                                </td>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.obesityChildren1Female}" styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.obesityChildren1Female}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+
+                                            </tr>
+
+
+                                            <tr>
+                                                <td rowspan="2" >
+                                                    <p:outputLabel value="Grade 4" ></p:outputLabel>
+                                                </td>
+                                                <td>
+                                                    <p:outputLabel value="Male" ></p:outputLabel>
+                                                </td>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.obesityChildren4Male}" styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.obesityChildren4Male}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <p:outputLabel value="Female" ></p:outputLabel>
+                                                </td>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.obesityChildren4Female}" styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.obesityChildren4Female}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+
+                                            </tr>
+
+                                            <tr>
+                                                <td rowspan="2" >
+                                                    <p:outputLabel value="Grade 7" ></p:outputLabel>
+                                                </td>
+                                                <td>
+                                                    <p:outputLabel value="Male" ></p:outputLabel>
+                                                </td>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.obesityChildren7Male}" styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.obesityChildren7Male}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <p:outputLabel value="Female" ></p:outputLabel>
+                                                </td>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.obesityChildren7Female}" styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.obesityChildren7Female}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+
+                                            </tr>
+
+                                            <tr>
+                                                <td rowspan="2" >
+                                                    <p:outputLabel value="Grade 10" ></p:outputLabel>
+                                                </td>
+                                                <td>
+                                                    <p:outputLabel value="Male" ></p:outputLabel>
+                                                </td>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.obesityChildren10Male}" styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.obesityChildren10Male}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <p:outputLabel value="Female" ></p:outputLabel>
+                                                </td>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.obesityChildren10Female}" styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.obesityChildren10Female}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+
+                                            </tr>
+
+                                            <tr>
+                                                <td rowspan="2" >
+                                                    <p:outputLabel value="Other Grades" ></p:outputLabel>
+                                                </td>
+                                                <td>
+                                                    <p:outputLabel value="Male" ></p:outputLabel>
+                                                </td>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.obesityChildrenOtherMale}" styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.obesityChildrenOtherMale}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <p:outputLabel value="Female" ></p:outputLabel>
+                                                </td>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.obesityChildrenOtherFemale}" styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.obesityChildrenOtherFemale}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+
+                                            </tr>
+
+
+
+
+                                        </table>
+                                    </p:tab>
+                                    <p:tab title="6. Problems Detected 2" >
+                                        <table  class="tg"  >
+                                            <tr>
+                                                <th >
+                                                    <p:outputLabel value="School" ></p:outputLabel>
+                                                </th>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <th>
+                                                        <p:outputLabel value="#{sr.summeryOfSchoolMedicalInspection.school.name}" ></p:outputLabel>
+                                                    </th>
+                                                </ui:repeat>
+                                                <th colspan="2" >
+                                                    <p:outputLabel value="Total" ></p:outputLabel>
+                                                </th>
+                                                <th  colspan="2" >
+                                                    <p:outputLabel value="No. Corrected" ></p:outputLabel>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th >
+                                                    <p:outputLabel value="Date" ></p:outputLabel>
+                                                </th>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <th>
+                                                        <p:outputLabel value="#{sr.summeryOfSchoolMedicalInspection.dateExamined}" >
+                                                            <f:convertDateTime pattern="dd MM yyyy" ></f:convertDateTime>
+                                                        </p:outputLabel>
+                                                    </th>
+                                                </ui:repeat>
+                                                <th>
+                                                    <p:outputLabel value="For the month" ></p:outputLabel>
+                                                </th>
+                                                <th>
+                                                    <p:outputLabel value="For the year" ></p:outputLabel>
+                                                </th>
+                                                <th>
+                                                    <p:outputLabel value="For the month" ></p:outputLabel>
+                                                </th>
+                                                <th>
+                                                    <p:outputLabel value="For the year" ></p:outputLabel>
+                                                </th>
+                                            </tr>
+
+                                            <tr>
+                                                <th  >
+                                                    <p:outputLabel value="Visual Defects" ></p:outputLabel>
+                                                </th>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.visualDefects}"  styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.visualDefects}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheYear.visualDefects}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheMonth.visualDefects}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheYear.visualDefects}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th  >
+                                                    <p:outputLabel value="Hearing Defects" ></p:outputLabel>
+                                                </th>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.hearingDefects}"  styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.hearingDefects}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheYear.hearingDefects}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheMonth.hearingDefects}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheYear.hearingDefects}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th  >
+                                                    <p:outputLabel value="Speech Defects" ></p:outputLabel>
+                                                </th>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.speechDeefcts}"  styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.speechDeefcts}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheYear.speechDeefcts}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheMonth.speechDeefcts}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheYear.speechDeefcts}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                            </tr>
+
+
+                                            <tr>
+                                                <th  >
+                                                    <p:outputLabel value="Pediculosis" ></p:outputLabel>
+                                                </th>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.pediculosis}"  styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.pediculosis}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheYear.pediculosis}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheMonth.pediculosis}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheYear.pediculosis}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th  >
+                                                    <p:outputLabel value="Night Blindness" ></p:outputLabel>
+                                                </th>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.nightBlindness}"  styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.nightBlindness}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheYear.nightBlindness}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheMonth.nightBlindness}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheYear.nightBlindness}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th  >
+                                                    <p:outputLabel value="Bitot Spots" ></p:outputLabel>
+                                                </th>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.bitotSpots}"  styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.bitotSpots}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheYear.bitotSpots}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheMonth.bitotSpots}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheYear.bitotSpots}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th  >
+                                                    <p:outputLabel value="Squent" ></p:outputLabel>
+                                                </th>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.squint}"  styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.squint}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheYear.squint}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheMonth.squint}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheYear.squint}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th  >
+                                                    <p:outputLabel value="Pallor" ></p:outputLabel>
+                                                </th>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.pallor}"  styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.pallor}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheYear.pallor}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheMonth.pallor}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheYear.pallor}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th  >
+                                                    <p:outputLabel value="Angular Stomatitis / Glossitis" ></p:outputLabel>
+                                                </th>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.angularStomatitisGlossitis}"  styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.angularStomatitisGlossitis}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheYear.angularStomatitisGlossitis}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheMonth.angularStomatitisGlossitis}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheYear.angularStomatitisGlossitis}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th  >
+                                                    <p:outputLabel value="Dental Caries" ></p:outputLabel>
+                                                </th>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.dentalCaries}"  styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.dentalCaries}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheYear.dentalCaries}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheMonth.dentalCaries}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheYear.dentalCaries}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th  >
+                                                    <p:outputLabel value="Calculus" ></p:outputLabel>
+                                                </th>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.calculus}"  styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.calculus}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheYear.calculus}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheMonth.calculus}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheYear.calculus}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th  >
+                                                    <p:outputLabel value="Flurosis" ></p:outputLabel>
+                                                </th>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.fluorosis}"  styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.fluorosis}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheYear.fluorosis}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheMonth.fluorosis}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheYear.fluorosis}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th  >
+                                                    <p:outputLabel value="Malocculusion" ></p:outputLabel>
+                                                </th>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.malocclusion}"  styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.malocclusion}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheYear.malocclusion}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheMonth.malocclusion}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheYear.malocclusion}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th  >
+                                                    <p:outputLabel value="Goitre" ></p:outputLabel>
+                                                </th>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.goitre}"  styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.goitre}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheYear.goitre}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheMonth.goitre}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheYear.goitre}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th  >
+                                                    <p:outputLabel value="ENT Defects" ></p:outputLabel>
+                                                </th>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.entDefects}"  styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.entDefects}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheYear.entDefects}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheMonth.entDefects}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheYear.entDefects}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th  >
+                                                    <p:outputLabel value="Lymphadenopathy" ></p:outputLabel>
+                                                </th>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.lympahdenopathy}"  styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.lympahdenopathy}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheYear.lympahdenopathy}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheMonth.lympahdenopathy}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheYear.lympahdenopathy}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th  >
+                                                    <p:outputLabel value="Scabies" ></p:outputLabel>
+                                                </th>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.scabies}"  styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.scabies}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheYear.scabies}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheMonth.scabies}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheYear.scabies}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th  >
+                                                    <p:outputLabel value="Hypopogmented Anaesthetic patches" ></p:outputLabel>
+                                                </th>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.hypopigmentedAnaestheticPatches}"  styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.hypopigmentedAnaestheticPatches}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheYear.hypopigmentedAnaestheticPatches}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheMonth.hypopigmentedAnaestheticPatches}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheYear.hypopigmentedAnaestheticPatches}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th  >
+                                                    <p:outputLabel value="Other Skin Disorders" ></p:outputLabel>
+                                                </th>
+                                                <ui:repeat value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.monthlyStatementSummeryDataForSingleInspections}" var="sr" >
+                                                    <td>
+                                                        <p:inputText value="#{sr.otherSkinDisorders}"  styleClass="shortNumbers" ></p:inputText>
+                                                    </td>
+                                                </ui:repeat>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheMonth.otherSkinDisorders}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.totalForTheYear.otherSkinDisorders}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheMonth.otherSkinDisorders}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                                <td>
+                                                    <p:inputText value="#{monthlyStatementOfSchoolHealthActivitiesController.selected.numberCorrectedForTheYear.otherSkinDisorders}"   styleClass="shortNumbers" ></p:inputText>
+                                                </td>
+                                            </tr>
+
+                                            
+                                            
+                                            
+                                        </table>
+                                    </p:tab>
+
                                     <p:tab title="7. Immunization" ></p:tab>
                                     <p:tab title="8. Micronutirtions, Anti Helminthic treatment and follow up activities" ></p:tab>
                                     <p:tab title="9. Information on Health Promoting schools" ></p:tab>
@@ -676,7 +1768,7 @@
                             </p:panel>
 
 
-                        </h:form>
+                        </h:form> 
                     </f:view>
 
 

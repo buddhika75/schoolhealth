@@ -31,7 +31,8 @@
                             <p:selectOneMenu value="#{monthlyStatementOfSchoolHealthActivitiesController.phiArea}" >
                                 <f:selectItems value="#{webUserController.myPhiAreas}" var="a" itemLabel="#{a.name}" itemValue="#{a}" ></f:selectItems>
                             </p:selectOneMenu>
-                            <p:commandButton ajax="false" value="Generate Monthly Statement" action="#{monthlyStatementOfSchoolHealthActivitiesController.generateMonthlyStatement()}" ></p:commandButton>
+                            <p:commandButton ajax="false" value="Generate Monthly Statement" 
+                                             action="#{monthlyStatementOfSchoolHealthActivitiesController.generateMonthlyStatement()}" ></p:commandButton>
                         </h:panelGrid>
 
                     </h:form>

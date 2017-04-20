@@ -66,7 +66,7 @@ public class EnumController {
             HealthProblem.Angular_stomatitis_Glossitis,
             HealthProblem.Fluorosis,
             HealthProblem.Malocclusion,
-            HealthProblem.Giotre,
+            HealthProblem.Goitre,
             HealthProblem.Lymphadenopathy,
             HealthProblem.Scabies,
             HealthProblem.Hypopigmented_anaesthetic_patches,
